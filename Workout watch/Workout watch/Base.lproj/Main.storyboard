@@ -102,7 +102,7 @@
         <!--stopwatch 1-->
         <scene sceneID="65t-cB-o99">
             <objects>
-                <viewController title="stopwatch 1" id="c78-pf-R23" customClass="StopWatchViewController" customModule="Workout_watch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="stopwatch 1" hidesBottomBarWhenPushed="YES" id="c78-pf-R23" customClass="StopWatchViewController" customModule="Workout_watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i0I-TB-3CZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iLd-ym-HnF"/>
@@ -122,7 +122,7 @@
                                 <rect key="frame" x="548" y="550" width="32" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
-                                    <action selector="stop:" destination="c78-pf-R23" eventType="touchUpInside" id="rBi-wr-nXd"/>
+                                    <action selector="stop:" destination="c78-pf-R23" eventType="touchUpInside" id="o2W-Ov-Pua"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-YX-4Cq">
@@ -152,7 +152,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPB-j5-hca">
-                                <rect key="frame" x="516" y="447" width="64" height="64"/>
+                                <rect key="frame" x="548" y="72" width="45" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="bmf-Xp-3hq"/>
+                                    <constraint firstAttribute="width" constant="45" id="oQy-Yd-mJR"/>
+                                </constraints>
                                 <state key="normal" image="lock"/>
                                 <connections>
                                     <action selector="lock:" destination="c78-pf-R23" eventType="touchUpInside" id="Zmq-YZ-En3"/>
@@ -162,12 +166,12 @@
                         <color key="backgroundColor" red="0.85768411332094241" green="0.85768411332094241" blue="0.85768411332094241" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fTq-8p-Han" firstAttribute="top" secondItem="i0I-TB-3CZ" secondAttribute="bottom" id="0nT-he-4JM"/>
-                            <constraint firstItem="NPB-j5-hca" firstAttribute="trailing" secondItem="3Td-13-Kul" secondAttribute="trailingMargin" id="114-KE-xJi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NPB-j5-hca" secondAttribute="trailing" constant="-13" id="3Cz-sr-Aul"/>
                             <constraint firstItem="cBj-zV-Q2M" firstAttribute="trailing" secondItem="3Td-13-Kul" secondAttribute="trailingMargin" id="4PT-Xw-lEG"/>
                             <constraint firstItem="jWh-YX-4Cq" firstAttribute="centerX" secondItem="3Td-13-Kul" secondAttribute="centerX" id="FIA-nu-Pbl"/>
                             <constraint firstItem="8Rh-1q-ILX" firstAttribute="top" secondItem="jWh-YX-4Cq" secondAttribute="bottom" constant="17" id="HG7-rG-YlA"/>
+                            <constraint firstItem="NPB-j5-hca" firstAttribute="top" secondItem="i0I-TB-3CZ" secondAttribute="bottom" constant="8" id="J2W-MB-pAa"/>
                             <constraint firstItem="fTq-8p-Han" firstAttribute="leading" secondItem="3Td-13-Kul" secondAttribute="leadingMargin" constant="-20" id="dax-NE-Cke"/>
-                            <constraint firstItem="cBj-zV-Q2M" firstAttribute="top" secondItem="NPB-j5-hca" secondAttribute="bottom" constant="39" id="e4b-KO-ni2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fTq-8p-Han" secondAttribute="trailing" constant="-20" id="fkS-B8-99r"/>
                             <constraint firstItem="8Rh-1q-ILX" firstAttribute="centerX" secondItem="3Td-13-Kul" secondAttribute="centerX" id="iQy-ob-sJ9"/>
                             <constraint firstItem="iLd-ym-HnF" firstAttribute="top" secondItem="cBj-zV-Q2M" secondAttribute="bottom" constant="20" id="mJv-lI-6tn"/>

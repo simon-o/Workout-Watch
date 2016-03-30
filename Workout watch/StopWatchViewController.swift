@@ -7,24 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var displayTime: UILabel!
-    @IBAction func start(sender:AnyObject){
-        let aSelector : Selector = #selector(StopWatchViewController.updateTime)
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        startTime = NSDate.timeIntervalSinceReferenceDate()
-    }
-    @IBAction func stop(sender:AnyObject){
-        timer.invalidate()
-    }
     
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     var minuteSet = "0"
     var secondesSet = "30"
+    
+    @IBAction func start(sender:AnyObject){
+        if !timer.valid {
+        let aSelector : Selector = #selector(StopWatchViewController.updateTime)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        }
+    }
+    @IBAction func stop(sender:AnyObject){
+        timer.invalidate()
+    }
     
     let pickerData = [
         ["00","01","02","03","04"],
@@ -52,12 +56,13 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    var audioPlayer = AVAudioPlayer()
+    
     func updateLabel(){
         let sizeComponent = PickerComponent.min.rawValue
         let toppingComponent = PickerComponent.sec.rawValue
         minuteSet = pickerData[sizeComponent][picker.selectedRowInComponent(sizeComponent)]
         secondesSet = pickerData[toppingComponent][picker.selectedRowInComponent(toppingComponent)]
-        
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         updateLabel()
@@ -87,20 +92,17 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
-    
-   
-    
     func updateTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
         
-        var minutes = UInt8(elapsedTime/60.0)
+        let minutes = UInt8(elapsedTime/60.0)
         elapsedTime -= (NSTimeInterval(minutes)*60)
-        var seconds = UInt8(elapsedTime)
+        let seconds = UInt8(elapsedTime)
         
         elapsedTime -= NSTimeInterval(seconds)
         
-        var fraction = UInt8(elapsedTime * 100)
+        let fraction = UInt8(elapsedTime * 100)
         
         let strMinutes = String(format: "%02d", minutes)
         let strSeconds = String(format: "%02d", seconds)
@@ -108,7 +110,15 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         displayTime.text = "\(strMinutes):\(strSeconds):\(strFraction)"
         if strMinutes >= minuteSet && strSeconds >= secondesSet{
-            NSLog("alarm")
+            let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Beep Sound", ofType: "mp3")!)
+            do{
+            audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            }
+            catch{
+                fatalError("Error loading url")
+            }
             timer.invalidate()
             let aSelector : Selector = #selector(StopWatchViewController.updateTime)
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)

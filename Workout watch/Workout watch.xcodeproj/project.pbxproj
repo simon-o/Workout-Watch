@@ -14,6 +14,7 @@
 		D63170E11CAA00E500526C47 /* Workout_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170E01CAA00E500526C47 /* Workout_watchTests.swift */; };
 		D63170EC1CAA00E500526C47 /* Workout_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170EB1CAA00E500526C47 /* Workout_watchUITests.swift */; };
 		D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */; };
+		D6C6DF271CABDD4100B9796A /* Beep Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D63170EB1CAA00E500526C47 /* Workout_watchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_watchUITests.swift; sourceTree = "<group>"; };
 		D63170ED1CAA00E500526C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopWatchViewController.swift; path = ../StopWatchViewController.swift; sourceTree = "<group>"; };
+		D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Sound.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D63170D21CAA00E500526C47 /* Assets.xcassets */,
 				D63170D41CAA00E500526C47 /* LaunchScreen.storyboard */,
 				D63170D71CAA00E500526C47 /* Info.plist */,
+				D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */,
 			);
 			path = "Workout watch";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63170D61CAA00E500526C47 /* LaunchScreen.storyboard in Resources */,
+				D6C6DF271CABDD4100B9796A /* Beep Sound.mp3 in Resources */,
 				D63170D31CAA00E500526C47 /* Assets.xcassets in Resources */,
 				D63170D11CAA00E500526C47 /* Main.storyboard in Resources */,
 			);
