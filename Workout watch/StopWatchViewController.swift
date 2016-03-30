@@ -13,21 +13,45 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var displayTime: UILabel!
+    @IBOutlet weak var stopButton: UIButton!
     
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     var minuteSet = "0"
     var secondesSet = "30"
+    var reset = true
     
     @IBAction func start(sender:AnyObject){
         if !timer.valid {
-        let aSelector : Selector = #selector(StopWatchViewController.updateTime)
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        startTime = NSDate.timeIntervalSinceReferenceDate()
+            if reset == true{
+                //play first
+                stopButton.setTitle("Stop", forState: .Normal)
+                let aSelector : Selector = #selector(StopWatchViewController.updateTime)
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+                reset = false
+                }
+        else{
+                //play if resume
+            let aSelector : Selector = #selector(StopWatchViewController.updateTime)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = NSDate.timeIntervalSinceReferenceDate()
+            }
         }
     }
     @IBAction func stop(sender:AnyObject){
-        timer.invalidate()
+        if timer.valid{
+            //stop
+            timer.invalidate()
+            stopButton.setTitle("Reset", forState: .Normal)
+            reset = true
+        }
+        else{
+            //resume
+            displayTime.text = "00:00:00"
+            stopButton.setTitle("Stop", forState: .Normal)
+            startTime = 0
+            reset = false
+        }
     }
     
     let pickerData = [
@@ -84,6 +108,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
         picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
         setLabel.text = "set : \(set)"
+        startTime = NSDate.timeIntervalSinceReferenceDate()
         updateLabel()
     }
  
@@ -133,5 +158,4 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             setLabel.text = "set : \(set)"
         }
     }
-
 }
