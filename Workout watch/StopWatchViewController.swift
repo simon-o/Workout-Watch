@@ -20,21 +20,26 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var minuteSet = "0"
     var secondesSet = "30"
     var reset = true
+    var elapsedTime: double_t = 0
+    var tmp: double_t = 0
     
     @IBAction func start(sender:AnyObject){
         if !timer.valid {
             if reset == true{
-                //play first
+                //play first or stop
                 stopButton.setTitle("Stop", forState: .Normal)
                 let aSelector : Selector = #selector(StopWatchViewController.updateTime)
                 timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
                 reset = false
+                if tmp != 0{
+                startTime = startTime + (NSDate.timeIntervalSinceReferenceDate() - tmp)
                 }
-        else{
+                }
+            else{
                 //play if resume
-            let aSelector : Selector = #selector(StopWatchViewController.updateTime)
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-            startTime = NSDate.timeIntervalSinceReferenceDate()
+                let aSelector : Selector = #selector(StopWatchViewController.updateTime)
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+                startTime = NSDate.timeIntervalSinceReferenceDate()
             }
         }
     }
@@ -42,6 +47,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if timer.valid{
             //stop
             timer.invalidate()
+            tmp = NSDate.timeIntervalSinceReferenceDate()
             stopButton.setTitle("Reset", forState: .Normal)
             reset = true
         }
@@ -119,7 +125,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func updateTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
-        var elapsedTime: NSTimeInterval = currentTime - startTime
+        elapsedTime = currentTime - startTime
         
         let minutes = UInt8(elapsedTime/60.0)
         elapsedTime -= (NSTimeInterval(minutes)*60)
