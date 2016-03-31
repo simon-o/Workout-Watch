@@ -11,9 +11,14 @@ import UIKit
 class exerciseTableViewController: UITableViewController {
 
     var numberOFExercise:Int = 0
+    var day:String!
+    var dictName: NSMutableArray = [""]
+    var dictRep: NSMutableArray = [0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //fill the dict here
+        numberOFExercise = dictName.count
         }
 
     override func didReceiveMemoryWarning() {
@@ -25,28 +30,44 @@ class exerciseTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dictName.count
     }
     
     func setNumberExercise(number: Int) {
+        if number > numberOFExercise {
+            dictName.addObject("")
+            dictRep.addObject(0)
+        }
+        else{
+            dictName.removeObjectAtIndex(number)
+            dictRep.removeObjectAtIndex(number)
+        }
         numberOFExercise = number
-        print(numberOFExercise)
+        tableView.reloadData()
     }
 
-    /*
+    override func viewWillDisappear(animated: Bool) {
+        //save all the day
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        let cellIdentifier = "exercise"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! exerciseTableViewCell
+        
+        let row = indexPath.row
+        cell.name.text = dictName[row] as? String
 
         return cell
     }
-    */
+ 
+    func addExercise(){
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

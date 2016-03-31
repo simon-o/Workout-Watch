@@ -15,6 +15,7 @@ class listExerciseViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     var containerViewController: exerciseTableViewController?
     // segue "embed"
+    var day:String?
     
     @IBAction func clickStepper(sender: AnyObject) {
         if stepper.value > 15
@@ -30,11 +31,18 @@ class listExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let tmp = containerViewController?.dictName.count
+        stepper.value = double_t(tmp!)
+        print("nombre stepper exo: \(stepper.value)")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        //save data
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

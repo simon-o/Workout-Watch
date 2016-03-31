@@ -9,11 +9,25 @@
 import UIKit
 import AVFoundation
 
+extension NSDate {
+    func dayOfWeek() -> Int? {
+        if
+            let cal: NSCalendar = NSCalendar.currentCalendar(),
+            let comp: NSDateComponents = cal.components(.Weekday, fromDate: self) {
+            return comp.weekday
+        } else {
+            return nil
+        }
+    }
+}
+//NSDate().dayOfWeek()
+
 class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var displayTime: UILabel!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var typeofExercise: UILabel!
     
     var startTime = NSTimeInterval()
     var timer = NSTimer()
@@ -129,7 +143,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
         
         setLabel.text = "set : \(set)/5"
-        
+        typeofExercise.text = "\(NSDate().dayOfWeek())"
         updateLabel()
     }
     

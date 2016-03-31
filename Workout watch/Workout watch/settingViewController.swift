@@ -26,6 +26,10 @@ class settingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if defaults.doubleForKey("numberSet").isNormal == true{
+            slider.value = float_t(defaults.doubleForKey("numberSet"))
+        }
         // Do any additional setup after loading the view.
     }
 
