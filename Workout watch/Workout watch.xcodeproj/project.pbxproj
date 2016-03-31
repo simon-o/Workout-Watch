@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61806C41CAD765D00976284 /* listExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61806C31CAD765D00976284 /* listExerciseViewController.swift */; };
+		D61806C61CAD767E00976284 /* exerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61806C51CAD767E00976284 /* exerciseTableViewController.swift */; };
 		D63170CC1CAA00E500526C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170CB1CAA00E500526C47 /* AppDelegate.swift */; };
 		D63170D11CAA00E500526C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63170CF1CAA00E500526C47 /* Main.storyboard */; };
 		D63170D31CAA00E500526C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63170D21CAA00E500526C47 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D61806C31CAD765D00976284 /* listExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listExerciseViewController.swift; sourceTree = "<group>"; };
+		D61806C51CAD767E00976284 /* exerciseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseTableViewController.swift; sourceTree = "<group>"; };
 		D63170C81CAA00E500526C47 /* Workout watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63170CB1CAA00E500526C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D63170D01CAA00E500526C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				D6C6DF281CAC8D3100B9796A /* settingViewController.swift */,
 				D63170CB1CAA00E500526C47 /* AppDelegate.swift */,
 				D63170CF1CAA00E500526C47 /* Main.storyboard */,
+				D61806C51CAD767E00976284 /* exerciseTableViewController.swift */,
+				D61806C31CAD765D00976284 /* listExerciseViewController.swift */,
 				D63170D21CAA00E500526C47 /* Assets.xcassets */,
 				D63170D41CAA00E500526C47 /* LaunchScreen.storyboard */,
 				D63170D71CAA00E500526C47 /* Info.plist */,
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61806C41CAD765D00976284 /* listExerciseViewController.swift in Sources */,
 				D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */,
+				D61806C61CAD767E00976284 /* exerciseTableViewController.swift in Sources */,
 				D63170CC1CAA00E500526C47 /* AppDelegate.swift in Sources */,
 				D6C6DF291CAC8D3100B9796A /* settingViewController.swift in Sources */,
 			);
