@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol ContainerToMaster {
-    func setNumberExercise(number: Int)
-}
-
 class exerciseTableViewController: UITableViewController {
 
     var numberOFExercise:Int = 0

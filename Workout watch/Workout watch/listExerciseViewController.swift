@@ -17,7 +17,14 @@ class listExerciseViewController: UIViewController {
     // segue "embed"
     
     @IBAction func clickStepper(sender: AnyObject) {
-        containerViewController?.setNumberExercise(Int(stepper.value))
+        if stepper.value > 15
+        {
+            stepper.value = 15
+        }
+        else
+        {
+            containerViewController?.setNumberExercise(Int(stepper.value))
+        }
     }
     
     override func viewDidLoad() {
