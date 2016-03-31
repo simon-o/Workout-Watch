@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var displayTime: UILabel!
     @IBOutlet weak var stopButton: UIButton!
@@ -22,6 +22,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var reset = true
     var elapsedTime: double_t = 0
     var tmp: double_t = 0
+    var stringOne:Double!
     
     @IBAction func start(sender:AnyObject){
         if !timer.valid {
@@ -32,9 +33,13 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
                 reset = false
                 if tmp != 0{
-                startTime = startTime + (NSDate.timeIntervalSinceReferenceDate() - tmp)
+                    startTime = startTime + (NSDate.timeIntervalSinceReferenceDate() - tmp)
                 }
+                else
+                {
+                    startTime = NSDate.timeIntervalSinceReferenceDate()
                 }
+            }
             else{
                 //play if resume
                 let aSelector : Selector = #selector(StopWatchViewController.updateTime)
@@ -109,15 +114,25 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return pickerData[component][row]
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let i = defaults.doubleForKey("numberSet")
+        stringOne = i
+        setLabel.text = "set : \(set)/\(i)"
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
         picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
-        setLabel.text = "set : \(set)"
-        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        setLabel.text = "set : \(set)/5"
+        
         updateLabel()
     }
- 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -143,9 +158,9 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if strMinutes >= minuteSet && strSeconds >= secondesSet{
             let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Beep Sound", ofType: "mp3")!)
             do{
-            audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
+                audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
             }
             catch{
                 fatalError("Error loading url")
@@ -155,13 +170,13 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = NSDate.timeIntervalSinceReferenceDate()
             
-            if set == 5{
+            if set == Int(stringOne!){
                 set = 0
             }
             else{
                 set += 1
             }
-            setLabel.text = "set : \(set)"
+            setLabel.text = "set : \(set)/\(stringOne)"
         }
     }
 }

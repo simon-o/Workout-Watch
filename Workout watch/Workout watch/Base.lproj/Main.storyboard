@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="-14" y="1769"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="k9m-ON-yaA">
             <objects>
-                <viewController id="8UN-ee-5Z3" sceneMemberID="viewController">
+                <viewController id="8UN-ee-5Z3" customClass="settingViewController" customModule="Workout_watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fVi-eP-hr4"/>
                         <viewControllerLayoutGuide type="bottom" id="L24-Ax-9MO"/>
@@ -239,15 +239,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l67-xf-8g3">
-                                <rect key="frame" x="20" y="138" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of set :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l67-xf-8g3">
+                                <rect key="frame" x="20" y="105" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-pz-hDG">
+                                <rect key="frame" x="553" y="105" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="bwb-mU-2pO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EC9-c8-ajp">
+                                <rect key="frame" x="145" y="101" width="402" height="31"/>
+                                <connections>
+                                    <action selector="slideAction:" destination="8UN-ee-5Z3" eventType="valueChanged" id="3YF-tr-IgD"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l67-xf-8g3" firstAttribute="top" secondItem="fVi-eP-hr4" secondAttribute="bottom" constant="41" id="E6D-nW-Ijo"/>
+                            <constraint firstItem="l67-xf-8g3" firstAttribute="leading" secondItem="yII-hm-2gg" secondAttribute="leadingMargin" id="F8O-uq-fme"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iWy-pz-hDG" secondAttribute="trailing" constant="-15" id="RxD-48-2eg"/>
+                            <constraint firstItem="EC9-c8-ajp" firstAttribute="leading" secondItem="l67-xf-8g3" secondAttribute="trailing" constant="8" symbolic="YES" id="ZUQ-Ig-JIL"/>
+                            <constraint firstItem="iWy-pz-hDG" firstAttribute="leading" secondItem="EC9-c8-ajp" secondAttribute="trailing" constant="8" id="cLc-Yg-uKM"/>
+                            <constraint firstItem="iWy-pz-hDG" firstAttribute="top" secondItem="fVi-eP-hr4" secondAttribute="bottom" constant="41" id="eJ6-6X-fCA"/>
+                            <constraint firstItem="EC9-c8-ajp" firstAttribute="top" secondItem="fVi-eP-hr4" secondAttribute="bottom" constant="37" id="uQ3-2Z-bAB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelSet" destination="iWy-pz-hDG" id="ATq-KA-XxW"/>
+                        <outlet property="slider" destination="EC9-c8-ajp" id="iNo-mY-o3y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7V-PP-Fpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
