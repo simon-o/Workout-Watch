@@ -15,10 +15,13 @@ class exerciseTableViewController: UITableViewController {
     var dictName: NSMutableArray = [""]
     var dictRep: NSMutableArray = [0]
     
+    var numberOfSet:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //fill the dict here
         numberOFExercise = dictName.count
+        catchExercise()
         }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +42,7 @@ class exerciseTableViewController: UITableViewController {
     }
     
     func setNumberExercise(number: Int) {
+        print("stepper: \(number)  \(numberOFExercise)")
         if number > numberOFExercise {
             dictName.addObject("")
             dictRep.addObject(0)
@@ -52,7 +56,25 @@ class exerciseTableViewController: UITableViewController {
     }
 
     override func viewWillDisappear(animated: Bool) {
-        //save all the day
+        //save data
+ 
+        var i = 0
+        let tmp = dictName.count
+        
+        while i < tmp {
+            let indexPath = NSIndexPath(forRow: i, inSection: 0) // This defines what indexPath is which is used later to define a cell
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! exerciseTableViewCell!
+            
+            dictName.replaceObjectAtIndex(i, withObject: cell.name.text!)
+            dictRep.replaceObjectAtIndex(i, withObject: cell.stepperRep.value)
+            i += 1
+        }
+     
+        let defaults = NSUserDefaults.standardUserDefaults()
+    
+        defaults.setObject(dictName, forKey: "\(day)Name")
+        defaults.setObject(dictRep, forKey: "\(day)Rep")
+        defaults.synchronize()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -61,14 +83,41 @@ class exerciseTableViewController: UITableViewController {
         
         let row = indexPath.row
         cell.name.text = dictName[row] as? String
-
+        //do the stepper here
+        
+        let color1 = UIColor.init(red: 230/255, green: 240/255, blue: 248/255, alpha: 1)
+        let color2 = UIColor.init(red: 242/255, green: 247/255, blue: 251/255, alpha: 1)
+        
+        if (indexPath.row % 2) == 0 {
+            cell.backgroundColor = color1
+        }
+        else{
+            cell.backgroundColor = color2
+        }
+        
+        
         return cell
     }
- 
-    func addExercise(){
-        
-    }
 
+    func catchExercise()
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+//        if (defaults.objectForKey("\(day)numberSet") != nil){
+//            numberOfSet = defaults.integerForKey("\(day)numberSet")
+//        }
+//        if numberOfSet > 0 {
+            if (defaults.objectForKey("\(day)Name") != nil) {
+                dictName = defaults.mutableArrayValueForKey("\(day)Name")
+                print("catch dictname: \(dictName)")
+            }
+            if (defaults.objectForKey("\(day)Rep") != nil) {
+                dictRep = defaults.mutableArrayValueForKey("\(day)Rep")
+                print("catch dictname: \(dictRep)")
+                //}
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

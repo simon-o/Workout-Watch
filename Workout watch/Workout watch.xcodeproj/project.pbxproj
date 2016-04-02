@@ -19,6 +19,7 @@
 		D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */; };
 		D6C6DF271CABDD4100B9796A /* Beep Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */; };
 		D6C6DF291CAC8D3100B9796A /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C6DF281CAC8D3100B9796A /* settingViewController.swift */; };
+		D6C7510C1CAE81B200FB2422 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopWatchViewController.swift; path = ../StopWatchViewController.swift; sourceTree = "<group>"; };
 		D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Sound.mp3"; sourceTree = "<group>"; };
 		D6C6DF281CAC8D3100B9796A /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayTableViewController.swift; path = ../DayTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		D63170CA1CAA00E500526C47 /* Workout watch */ = {
 			isa = PBXGroup;
 			children = (
+				D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */,
 				D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */,
 				D6C6DF281CAC8D3100B9796A /* settingViewController.swift */,
 				D63170CB1CAA00E500526C47 /* AppDelegate.swift */,
@@ -276,6 +279,7 @@
 				D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */,
 				D61806C61CAD767E00976284 /* exerciseTableViewController.swift in Sources */,
 				D61806C81CADAA1800976284 /* exerciseTableViewCell.swift in Sources */,
+				D6C7510C1CAE81B200FB2422 /* DayTableViewController.swift in Sources */,
 				D63170CC1CAA00E500526C47 /* AppDelegate.swift in Sources */,
 				D6C6DF291CAC8D3100B9796A /* settingViewController.swift in Sources */,
 			);
