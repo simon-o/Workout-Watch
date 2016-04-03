@@ -49,7 +49,7 @@
                                         <color key="textColor" red="0.44705882670000002" green="0.44705882670000002" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-pi-fH0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Exercise of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-pi-fH0">
                                         <rect key="frame" x="275.5" y="8" width="49" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -310,7 +310,7 @@
                                             <color key="backgroundColor" red="0.87450980392156863" green="0.90588235294117647" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Monday" id="t9u-8Z-58j"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="2" id="t9u-8Z-58j"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tN8-af-dqz">
@@ -330,7 +330,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.91764705882352937" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Tuesday" id="wun-f7-ovy"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="3" id="wun-f7-ovy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Iyb-6b-bCH">
@@ -350,7 +350,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.84313725490196079" green="0.88235294117647056" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Wednesday" id="Hx0-o7-iH7"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="4" id="Hx0-o7-iH7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PdE-r4-WTo">
@@ -370,7 +370,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.89803921568627454" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Thursday" id="s2Y-0a-BdK"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="5" id="s2Y-0a-BdK"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YIE-sS-efO">
@@ -390,7 +390,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80784313725490198" green="0.85098039215686272" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Friday" id="HFR-L3-dKG"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="6" id="HFR-L3-dKG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yKi-gK-QTJ">
@@ -410,7 +410,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.90196078431372551" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Saturday" id="d6n-w7-dKw"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="7" id="d6n-w7-dKw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SQU-7G-6F1">
@@ -430,7 +430,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.76470588235294112" green="0.81176470588235294" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="GCn-xb-VHK" kind="show" identifier="Sunday" id="8bV-D9-FBy"/>
+                                            <segue destination="GCn-xb-VHK" kind="show" identifier="1" id="8bV-D9-FBy"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -650,6 +650,6 @@
         <image name="time" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HFR-L3-dKG"/>
+        <segue reference="s2Y-0a-BdK"/>
     </inferredMetricsTieBreakers>
 </document>

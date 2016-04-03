@@ -28,7 +28,8 @@ class settingViewController: UIViewController {
         super.viewDidLoad()
         let defaults = NSUserDefaults.standardUserDefaults()
         if defaults.doubleForKey("numberSet").isNormal == true{
-            slider.value = float_t(defaults.doubleForKey("numberSet"))
+            slider.value = float_t(defaults.doubleForKey("numberSet")) / 10
+            labelSet.text = String(stringInterpolationSegment: slider.value)
         }
         // Do any additional setup after loading the view.
     }

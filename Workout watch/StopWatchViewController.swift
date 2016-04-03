@@ -10,14 +10,11 @@ import UIKit
 import AVFoundation
 
 extension NSDate {
-    func dayOfWeek() -> Int? {
-        if
+    func dayOfWeek() -> Int! {
+        guard
             let cal: NSCalendar = NSCalendar.currentCalendar(),
-            let comp: NSDateComponents = cal.components(.Weekday, fromDate: self) {
-            return comp.weekday
-        } else {
-            return nil
-        }
+            let comp: NSDateComponents = cal.components(.Weekday, fromDate: self) else { return nil }
+        return comp.weekday
     }
 }
 //NSDate().dayOfWeek()
@@ -37,6 +34,9 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var elapsedTime: double_t = 0
     var tmp: double_t = 0
     var stringOne:Double!
+    var IndexExercise = 0
+    var dictName: NSMutableArray = [""]
+    
     
     @IBAction func start(sender:AnyObject){
         if !timer.valid {
@@ -75,7 +75,10 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             displayTime.text = "00:00:00"
             stopButton.setTitle("Stop", forState: .Normal)
             startTime = 0
+            IndexExercise = 0
+            setExercise()
             reset = false
+            
         }
     }
     
@@ -143,8 +146,28 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
         
         setLabel.text = "set : \(set)/5"
-        typeofExercise.text = "\(NSDate().dayOfWeek())"
+        setExercise()
         updateLabel()
+    }
+    
+    func setExercise()
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if (defaults.objectForKey("\(NSDate().dayOfWeek())Name") != nil) {
+            dictName = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Name")
+            if IndexExercise < dictName.count{
+                typeofExercise.text = dictName.objectAtIndex(IndexExercise) as? String
+            }
+            else{
+                stop(self)
+            }
+        }
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        setExercise()
     }
     
     override func didReceiveMemoryWarning() {
@@ -184,11 +207,11 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = NSDate.timeIntervalSinceReferenceDate()
             
-            if set == Int(stringOne!){
+            set += 1
+            if set >= Int(stringOne!){
                 set = 0
-            }
-            else{
-                set += 1
+                IndexExercise = IndexExercise + 1
+                setExercise()
             }
             setLabel.text = "set : \(set)/\(stringOne)"
         }

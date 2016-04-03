@@ -42,7 +42,6 @@ class exerciseTableViewController: UITableViewController {
     }
     
     func setNumberExercise(number: Int) {
-        print("stepper: \(number)  \(numberOFExercise)")
         if number > numberOFExercise {
             dictName.addObject("")
             dictRep.addObject(0)
@@ -109,11 +108,9 @@ class exerciseTableViewController: UITableViewController {
 //        if numberOfSet > 0 {
             if (defaults.objectForKey("\(day)Name") != nil) {
                 dictName = defaults.mutableArrayValueForKey("\(day)Name")
-                print("catch dictname: \(dictName)")
             }
             if (defaults.objectForKey("\(day)Rep") != nil) {
                 dictRep = defaults.mutableArrayValueForKey("\(day)Rep")
-                print("catch dictname: \(dictRep)")
                 //}
         }
     }
