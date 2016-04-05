@@ -142,7 +142,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         else{
             //resume
-            displayTime.text = "00:00:00"
+            displayTime.text = "00:00"
             stopButton.setTitle("Stop", forState: .Normal)
             startTime = 0
             set = 0
@@ -199,13 +199,13 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         elapsedTime -= NSTimeInterval(seconds)
         
-        let fraction = UInt8(elapsedTime * 100)
+        //let fraction = UInt8(elapsedTime * 100)
         
         let strMinutes = String(format: "%02d", minutes)
         let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
+        //let strFraction = String(format: "%02d", fraction)
         
-        displayTime.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        displayTime.text = "\(strMinutes):\(strSeconds)"
         if strMinutes >= minuteSet && strSeconds >= secondesSet{
             let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Beep Sound", ofType: "mp3")!)
             do{
