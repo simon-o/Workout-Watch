@@ -36,6 +36,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var elapsedTime: double_t = 0
     var tmp: double_t = 0
     var stringOne:Double!
+    var setNumber:Int!
     var IndexExercise = 0
     var dictName: NSMutableArray = [""]
     var dictSet: NSMutableArray = [0]
@@ -98,20 +99,16 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         if (defaults.objectForKey("\(NSDate().dayOfWeek())Set") != nil) {
             dictSet = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Set")
-            print("---- \(dictSet)")
             if IndexExercise < dictSet.count{
-                //typeofExercise.text = dictName.objectAtIndex(IndexExercise) as? String
                 stringOne = dictSet.objectAtIndex(IndexExercise) as! Double
-                setLabel.text = "set : \(set)/\(stringOne)"
-            }
-            else{
-                
+                setNumber = Int(stringOne)
+                setLabel.text = "set : \(set)/\(setNumber)"
             }
         }
     }
     
     @IBAction func start(sender:AnyObject){
-        if !timer.valid {
+        if !timer.valid && locker.imageForState(.Normal) == UIImage.animatedImageNamed("lock.png", duration: 0){
             if reset == true{
                 //play first or stop
                 stopButton.setTitle("Stop", forState: .Normal)
@@ -136,7 +133,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func stop(sender:AnyObject){
-        if timer.valid{
+         if timer.valid{
             //stop
             timer.invalidate()
             tmp = NSDate.timeIntervalSinceReferenceDate()
@@ -148,6 +145,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             displayTime.text = "00:00:00"
             stopButton.setTitle("Stop", forState: .Normal)
             startTime = 0
+            set = 0
             IndexExercise = 0
             setExercise()
             reset = false
@@ -159,6 +157,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             locker.setImage(UIImage.animatedImageNamed("security.png", duration: 0), forState: .Normal)
             picker.userInteractionEnabled = true
             picker.hidden = false
+            timer.invalidate()
         }
         else {
             locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
@@ -224,11 +223,13 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             set += 1
             if set >= Int(stringOne!){
-                set = 0
                 IndexExercise = IndexExercise + 1
                 setExercise()
+                if timer.valid{
+                    set = 0
+                }
             }
-            setLabel.text = "set : \(set)/\(stringOne)"
+            setLabel.text = "set : \(set)/\(setNumber)"
         }
     }
 }
