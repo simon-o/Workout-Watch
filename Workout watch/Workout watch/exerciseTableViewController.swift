@@ -13,15 +13,15 @@ class exerciseTableViewController: UITableViewController {
     var numberOFExercise:Int = 0
     var day:String!
     var dictName: NSMutableArray = [""]
-    var dictRep: NSMutableArray = [0]
+    var dictSet: NSMutableArray = [0]
     
     var numberOfSet:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //fill the dict here
-        numberOFExercise = dictName.count
         catchExercise()
+        numberOFExercise = dictName.count
         }
 
     override func didReceiveMemoryWarning() {
@@ -44,12 +44,13 @@ class exerciseTableViewController: UITableViewController {
     func setNumberExercise(number: Int) {
         if number > numberOFExercise {
             dictName.addObject("")
-            dictRep.addObject(0)
+            dictSet.addObject(0)
         }
         else{
             dictName.removeObjectAtIndex(number)
-            dictRep.removeObjectAtIndex(number)
+            dictSet.removeObjectAtIndex(number)
         }
+        viewWillDisappear(true)
         numberOFExercise = number
         tableView.reloadData()
     }
@@ -61,18 +62,22 @@ class exerciseTableViewController: UITableViewController {
         let tmp = dictName.count
         
         while i < tmp {
-            let indexPath = NSIndexPath(forRow: i, inSection: 0) // This defines what indexPath is which is used later to define a cell
+            let indexPath = NSIndexPath(forRow: i, inSection: 0)
             let cell = tableView.cellForRowAtIndexPath(indexPath) as! exerciseTableViewCell!
             
+            if cell != nil{
             dictName.replaceObjectAtIndex(i, withObject: cell.name.text!)
-            dictRep.replaceObjectAtIndex(i, withObject: cell.stepperRep.value)
+            dictSet.replaceObjectAtIndex(i, withObject: cell.stepperRep.value)
+            }
             i += 1
         }
-     
         let defaults = NSUserDefaults.standardUserDefaults()
-    
+        print("\(dictName) \(dictSet)")
+        
         defaults.setObject(dictName, forKey: "\(day)Name")
-        defaults.setObject(dictRep, forKey: "\(day)Rep")
+        
+        defaults.setObject(dictSet, forKey: "\(day)Set")
+        
         defaults.synchronize()
     }
     
@@ -82,6 +87,8 @@ class exerciseTableViewController: UITableViewController {
         
         let row = indexPath.row
         cell.name.text = dictName[row] as? String
+        cell.numberRep.text = String(dictSet[row])
+        cell.stepperRep.value = Double(dictSet[row] as! NSNumber)
         //do the stepper here
         
         let color1 = UIColor.init(red: 230/255, green: 240/255, blue: 248/255, alpha: 1)
@@ -109,8 +116,8 @@ class exerciseTableViewController: UITableViewController {
             if (defaults.objectForKey("\(day)Name") != nil) {
                 dictName = defaults.mutableArrayValueForKey("\(day)Name")
             }
-            if (defaults.objectForKey("\(day)Rep") != nil) {
-                dictRep = defaults.mutableArrayValueForKey("\(day)Rep")
+            if (defaults.objectForKey("\(day)Set") != nil) {
+                dictSet = defaults.mutableArrayValueForKey("\(day)Set")
                 //}
         }
     }

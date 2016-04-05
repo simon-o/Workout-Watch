@@ -17,7 +17,6 @@ extension NSDate {
         return comp.weekday
     }
 }
-//NSDate().dayOfWeek()
 
 class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -25,6 +24,9 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var displayTime: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var typeofExercise: UILabel!
+    
+    @IBOutlet weak var setLabel: UILabel!
+    @IBOutlet weak var locker: UIButton!
     
     var startTime = NSTimeInterval()
     var timer = NSTimer()
@@ -36,7 +38,77 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var stringOne:Double!
     var IndexExercise = 0
     var dictName: NSMutableArray = [""]
+    var dictSet: NSMutableArray = [0]
     
+    let pickerData = [
+        ["00","01","02","03","04"],
+        ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+    ]
+    
+    enum PickerComponent:Int{
+        case min = 0
+        case sec = 1
+    }
+    
+    var set = 0
+    
+    var audioPlayer = AVAudioPlayer()
+    
+    override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let i = defaults.doubleForKey("numberSet")
+        stringOne = i
+        setLabel.text = "set : \(set)/\(i)"
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
+        picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
+        
+        //setLabel.text = "set : \(set)/5"
+        
+        setExercise()
+        updateLabel()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        setExercise()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func setExercise()
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if (defaults.objectForKey("\(NSDate().dayOfWeek())Name") != nil) {
+            dictName = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Name")
+            if IndexExercise < dictName.count{
+                typeofExercise.text = dictName.objectAtIndex(IndexExercise) as? String
+            }
+            else{
+                stop(self)
+            }
+        }
+        if (defaults.objectForKey("\(NSDate().dayOfWeek())Set") != nil) {
+            dictSet = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Set")
+            print("---- \(dictSet)")
+            if IndexExercise < dictSet.count{
+                //typeofExercise.text = dictName.objectAtIndex(IndexExercise) as? String
+                stringOne = dictSet.objectAtIndex(IndexExercise) as! Double
+                setLabel.text = "set : \(set)/\(stringOne)"
+            }
+            else{
+                
+            }
+        }
+    }
     
     @IBAction func start(sender:AnyObject){
         if !timer.valid {
@@ -62,6 +134,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
     }
+    
     @IBAction func stop(sender:AnyObject){
         if timer.valid{
             //stop
@@ -78,37 +151,21 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             IndexExercise = 0
             setExercise()
             reset = false
-            
         }
     }
     
-    let pickerData = [
-        ["00","01","02","03","04"],
-        ["00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
-    ]
-    
-    enum PickerComponent:Int{
-        case min = 0
-        case sec = 1
-    }
-    
-    var set = 0
-    
-    @IBOutlet weak var setLabel: UILabel!
-    
-    @IBOutlet weak var locker: UIButton!
     @IBAction func lock(sender:AnyObject){
         if locker.imageForState(.Normal) == UIImage.animatedImageNamed("lock.png", duration: 0){
             locker.setImage(UIImage.animatedImageNamed("security.png", duration: 0), forState: .Normal)
             picker.userInteractionEnabled = true
+            picker.hidden = false
         }
         else {
             locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
             picker.userInteractionEnabled = false
+            picker.hidden = true
         }
     }
-    
-    var audioPlayer = AVAudioPlayer()
     
     func updateLabel(){
         let sizeComponent = PickerComponent.min.rawValue
@@ -116,9 +173,11 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         minuteSet = pickerData[sizeComponent][picker.selectedRowInComponent(sizeComponent)]
         secondesSet = pickerData[toppingComponent][picker.selectedRowInComponent(toppingComponent)]
     }
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         updateLabel()
     }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return pickerData.count
     }
@@ -129,50 +188,6 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[component][row]
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        let i = defaults.doubleForKey("numberSet")
-        stringOne = i
-        setLabel.text = "set : \(set)/\(i)"
-        
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
-        picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
-        
-        setLabel.text = "set : \(set)/5"
-        setExercise()
-        updateLabel()
-    }
-    
-    func setExercise()
-    {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        if (defaults.objectForKey("\(NSDate().dayOfWeek())Name") != nil) {
-            dictName = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Name")
-            if IndexExercise < dictName.count{
-                typeofExercise.text = dictName.objectAtIndex(IndexExercise) as? String
-            }
-            else{
-                stop(self)
-            }
-        }
-
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        setExercise()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func updateTime() {

@@ -9,11 +9,8 @@
 import UIKit
 
 class settingViewController: UIViewController {
-
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var labelSet: UILabel!
     
-    @IBAction func slideAction(sender: UISlider) {
+    /*@IBAction func slideAction(sender: UISlider) {
         var selectedValue = Double(sender.value)
         selectedValue = round(selectedValue * 10) * 1
         
@@ -22,15 +19,10 @@ class settingViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setDouble(selectedValue, forKey: "numberSet")
        defaults.synchronize()
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if defaults.doubleForKey("numberSet").isNormal == true{
-            slider.value = float_t(defaults.doubleForKey("numberSet")) / 10
-            labelSet.text = String(stringInterpolationSegment: slider.value)
-        }
         // Do any additional setup after loading the view.
     }
 

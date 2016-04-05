@@ -13,7 +13,10 @@ class exerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var numberRep: UILabel!
     @IBOutlet weak var stepperRep: UIStepper!
-    @IBOutlet weak var clickStepperRep: UIStepper!
+
+    @IBAction func clicStepperRep(sender: AnyObject) {
+        numberRep.text = String(Int(stepperRep.value))
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +25,6 @@ class exerciseTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
