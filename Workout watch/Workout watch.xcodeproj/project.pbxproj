@@ -17,6 +17,7 @@
 		D63170E11CAA00E500526C47 /* Workout_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170E01CAA00E500526C47 /* Workout_watchTests.swift */; };
 		D63170EC1CAA00E500526C47 /* Workout_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170EB1CAA00E500526C47 /* Workout_watchUITests.swift */; };
 		D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */; };
+		D6B6F3191CD15D1200C0D835 /* TutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6F3181CD15D1200C0D835 /* TutoViewController.swift */; };
 		D6C6DF271CABDD4100B9796A /* Beep Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */; };
 		D6C6DF291CAC8D3100B9796A /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C6DF281CAC8D3100B9796A /* settingViewController.swift */; };
 		D6C7510C1CAE81B200FB2422 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */; };
@@ -56,6 +57,7 @@
 		D63170EB1CAA00E500526C47 /* Workout_watchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_watchUITests.swift; sourceTree = "<group>"; };
 		D63170ED1CAA00E500526C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopWatchViewController.swift; path = ../StopWatchViewController.swift; sourceTree = "<group>"; };
+		D6B6F3181CD15D1200C0D835 /* TutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutoViewController.swift; sourceTree = "<group>"; };
 		D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Sound.mp3"; sourceTree = "<group>"; };
 		D6C6DF281CAC8D3100B9796A /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayTableViewController.swift; path = ../DayTableViewController.swift; sourceTree = "<group>"; };
@@ -113,10 +115,11 @@
 				D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */,
 				D6C6DF281CAC8D3100B9796A /* settingViewController.swift */,
 				D63170CB1CAA00E500526C47 /* AppDelegate.swift */,
-				D63170CF1CAA00E500526C47 /* Main.storyboard */,
+				D6B6F3181CD15D1200C0D835 /* TutoViewController.swift */,
 				D61806C71CADAA1800976284 /* exerciseTableViewCell.swift */,
 				D61806C51CAD767E00976284 /* exerciseTableViewController.swift */,
 				D61806C31CAD765D00976284 /* listExerciseViewController.swift */,
+				D63170CF1CAA00E500526C47 /* Main.storyboard */,
 				D63170D21CAA00E500526C47 /* Assets.xcassets */,
 				D63170D41CAA00E500526C47 /* LaunchScreen.storyboard */,
 				D63170D71CAA00E500526C47 /* Info.plist */,
@@ -287,6 +290,7 @@
 				D61806C81CADAA1800976284 /* exerciseTableViewCell.swift in Sources */,
 				D6C7510C1CAE81B200FB2422 /* DayTableViewController.swift in Sources */,
 				D63170CC1CAA00E500526C47 /* AppDelegate.swift in Sources */,
+				D6B6F3191CD15D1200C0D835 /* TutoViewController.swift in Sources */,
 				D6C6DF291CAC8D3100B9796A /* settingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

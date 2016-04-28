@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import iAd
 
 extension NSDate {
     func dayOfWeek() -> Int! {
@@ -19,7 +18,7 @@ extension NSDate {
     }
 }
 
-class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, ADInterstitialAdDelegate {
+class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var displayTime: UILabel!
@@ -42,11 +41,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var dictName: NSMutableArray = [""]
     var dictSet: NSMutableArray = [0]
     
-    //ADS
-    var interAdd = ADInterstitialAd()
-    var InterView: UIView = UIView()
-    
-    var closeButton = UIButton.init(type: UIButtonType.System)
+    //var closeButton = UIButton.init(type: UIButtonType.System)
     
     
     let pickerData = [
@@ -74,53 +69,29 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //ADS
-        closeButton.frame = CGRectMake(10, 10, 20, 20)
-        closeButton.layer.cornerRadius = 10
-        closeButton.setTitle("x", forState: .Normal)
-        closeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        closeButton.backgroundColor = UIColor.whiteColor()
-        closeButton.layer.borderColor = UIColor.blackColor().CGColor
-        closeButton.layer.borderWidth = 1
-        closeButton.addTarget(self, action: "close:", forControlEvents: UIControlEvents.TouchDown)
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce"))
+        {
+            print("first")
+            performSegueWithIdentifier("tuto", sender: self)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        self.navigationItem .setHidesBackButton(true , animated: true)
         
+//        //ADS
+//        closeButton.frame = CGRectMake(10, 10, 20, 20)
+//        closeButton.layer.cornerRadius = 10
+//        closeButton.setTitle("x", forState: .Normal)
+//        closeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+//        closeButton.backgroundColor = UIColor.whiteColor()
+//        closeButton.layer.borderColor = UIColor.blackColor().CGColor
+//        closeButton.layer.borderWidth = 1
+//        closeButton.addTarget(self, action: "close:", forControlEvents: UIControlEvents.TouchDown)
         
-        //locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
         picker.selectRow(2, inComponent: PickerComponent.min.rawValue, animated: false)
-        
-        //setLabel.text = "set : \(set)/5"
-        
+      
         setExercise()
         updateLabel()
-    }
-    
-    func close(sender: UIButton)
-    {
-        closeButton.removeFromSuperview()
-        InterView.removeFromSuperview()
-    }
-    
-    func load(){
-        interAdd = ADInterstitialAd()
-        interAdd.delegate = self
-    }
-    
-    func interstitialAdDidLoad(interstitialAd: ADInterstitialAd!) {
-        InterView = UIView()
-        InterView.frame = self.view.bounds
-        view.addSubview(InterView)
-        interAdd.presentInView(InterView)
-        UIViewController.prepareInterstitialAds()
-        InterView.addSubview(closeButton)
-    }
-    
-    func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!) {
-        
-    }
-    
-    func interstitialAd(interstitialAd: ADInterstitialAd!, didFailWithError error: NSError!) {
-        closeButton.removeFromSuperview()
-        InterView.removeFromSuperview()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -212,7 +183,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             picker.userInteractionEnabled = false
             picker.hidden = true
             //ADS
-            load()
+            //load()
         }
     }
     

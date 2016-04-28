@@ -31,7 +31,7 @@
         <!--stopwatch 1-->
         <scene sceneID="65t-cB-o99">
             <objects>
-                <viewController title="stopwatch 1" hidesBottomBarWhenPushed="YES" id="c78-pf-R23" customClass="StopWatchViewController" customModule="Workout_watch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="stopwatch 1" id="c78-pf-R23" customClass="StopWatchViewController" customModule="Workout_watch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i0I-TB-3CZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iLd-ym-HnF"/>
@@ -153,11 +153,44 @@
                         <outlet property="setLabel" destination="8Rh-1q-ILX" id="bau-uF-nrq"/>
                         <outlet property="stopButton" destination="cBj-zV-Q2M" id="LfD-Nz-tJ5"/>
                         <outlet property="typeofExercise" destination="hp4-pi-fH0" id="xMb-4c-Y6g"/>
+                        <segue destination="FZb-bh-CHf" kind="showDetail" identifier="tuto" action="showViewController:sender:" id="qxc-9s-6yj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5v-NO-1t2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="1703"/>
+            <point key="canvasLocation" x="1234" y="1691"/>
+        </scene>
+        <!--Tuto View Controller-->
+        <scene sceneID="5cN-sw-sue">
+            <objects>
+                <viewController id="FZb-bh-CHf" customClass="TutoViewController" customModule="Workout_watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a0S-su-pKR"/>
+                        <viewControllerLayoutGuide type="bottom" id="uSM-ZM-jAn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NLP-6J-G2B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-7Z-Pd4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PRq-7Z-Pd4" firstAttribute="leading" secondItem="NLP-6J-G2B" secondAttribute="leadingMargin" constant="-20" id="4IY-6b-ifT"/>
+                            <constraint firstItem="uSM-ZM-jAn" firstAttribute="top" secondItem="PRq-7Z-Pd4" secondAttribute="bottom" id="BCZ-2o-rZF"/>
+                            <constraint firstItem="PRq-7Z-Pd4" firstAttribute="top" secondItem="a0S-su-pKR" secondAttribute="bottom" id="NoU-A1-RqM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PRq-7Z-Pd4" secondAttribute="trailing" constant="-20" id="WaR-Qa-oyO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageViewFortuto" destination="PRq-7Z-Pd4" id="6OX-lT-X0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h89-1a-XqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="2452"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DfU-MT-AU0">
@@ -591,6 +624,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="640" height="1009"/>
         <image name="icon" width="32" height="32"/>
         <image name="security" width="64" height="64"/>
         <image name="time" width="32" height="32"/>
