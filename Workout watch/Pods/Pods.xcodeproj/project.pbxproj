@@ -1,0 +1,1143 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06039C95FFD23F70EFA39030EA0B2CFB /* Pods-Workout watchTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA61F873AA31D1C69277A8BA4C549C73 /* Pods-Workout watchTests-dummy.m */; };
+		17304741CA43A7EB226ABDCFFB6CADB5 /* UICircularProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CE1EE4E0D1C65DB14910A4BEFE8675 /* UICircularProgressRingView.swift */; };
+		29639C53337ABA5F3A0ECFADDAD76C20 /* Pods-Workout watch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0452BD9A0F4D4E3AB9C69B2A072F5B8 /* Pods-Workout watch-dummy.m */; };
+		2E0A577D4E96A7A19C708DF48132F07F /* Pods-Workout watchUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB080979F88C734854369A9E6B2CB70 /* Pods-Workout watchUITests-dummy.m */; };
+		3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		37CAA59D527B398F295F093386B2497D /* UICircularProgressRingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03174A50E97D5F9BE3BD43F50C647238 /* UICircularProgressRingDelegate.swift */; };
+		3C3681B36BEDF053229C4C67144D3EF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		4AB4F64F457869CE4E4F979BC57F93C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A513D882CCCB4749B0145DD2D23702AD /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		582CD5EBD114F93AA0FB12C11422D9AA /* Pods-Workout watchTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E242071C40AC222B1EAC85EBDEA7470 /* Pods-Workout watchTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61551DF0879338D711E8F2483D6C86D5 /* UICircularProgressRingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A083B8331B0F389888A65190152F6 /* UICircularProgressRingLayer.swift */; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A23808E2D830B5F965C38E7E2577F191 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		836B02EA0EE134816790D0030408D5EC /* UICircularProgressRing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4233D900DCB3611B08EE60D18B6BC66C /* UICircularProgressRing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FDD99A0219790E627DEE4D0C7A7217E /* UICircularProgressRing.h in Headers */ = {isa = PBXBuildFile; fileRef = 2235F5BC382E57F310FAF45EDAD07CCE /* UICircularProgressRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C1946476AD568E1A280F3BE6E87293 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		B711BDEA19F1ED687755559A8588A518 /* Pods-Workout watchUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BDF272A1C54A5ABC3E9CA6BA5FAA0E9 /* Pods-Workout watchUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C403FA0C5C9626DA4C7F238219385D36 /* Pods-Workout watch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DA87FDF99FBEE46B95A5936C30BE277 /* Pods-Workout watch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EBB87AEF982789A2B85E0C105DCB1AE /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFC412B364FB5AFA70EF90CBB793041C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 068DC41E22B4EF398A7725879A730BDD /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0A78F49D490714066F64C6D2790570 /* GoogleToolboxForMac-dummy.m */; };
+		FF5C69F3B8024F1AD4A68ADCC5034802 /* UICircularProgressRing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0DE0A78C526D0ED3F7F40A9D934CEC /* UICircularProgressRing-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C550E268A333FC2D35337AC4CA025AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C60C664E275B25898BF49EC41E2D4236;
+			remoteInfo = UICircularProgressRing;
+		};
+		F5424CA0702A4D78A1D2C43AB4192EFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0120751E8C722139295D34AD6F8CA118 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03174A50E97D5F9BE3BD43F50C647238 /* UICircularProgressRingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingDelegate.swift; path = UICircularProgressRing/UICircularProgressRingDelegate.swift; sourceTree = "<group>"; };
+		03194CD77E3660677719B81297B824A1 /* Pods-Workout watchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout watchTests.release.xcconfig"; sourceTree = "<group>"; };
+		05AB07ECCFB0B1E47413D88F8D393D3A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		068DC41E22B4EF398A7725879A730BDD /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		07B6E2829D217C0E94292F17896D38F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D0A03F3AFDB75B896084CBB81445DF8 /* Pods-Workout watch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout watch-frameworks.sh"; sourceTree = "<group>"; };
+		1837800E115DE4A9DC40C4F308FC5C31 /* Pods-Workout watchTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Workout watchTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1C2470ED8BFF93D70B3475DF102DA330 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		21D18D0A8EEE53BDD83EF3EB2148C883 /* UICircularProgressRing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-prefix.pch"; sourceTree = "<group>"; };
+		2235F5BC382E57F310FAF45EDAD07CCE /* UICircularProgressRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICircularProgressRing.h; path = UICircularProgressRing/UICircularProgressRing.h; sourceTree = "<group>"; };
+		2310B1F96825127A0AADFD44ECAB97CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A5E50DD54D9C39B8F41B5D0D46912F /* Pods-Workout watchUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Workout watchUITests.modulemap"; sourceTree = "<group>"; };
+		274C729A9BFB5EB4B5C513A5C726D9C7 /* UICircularProgressRing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICircularProgressRing.xcconfig; sourceTree = "<group>"; };
+		2A2B6BE6FDC6599785C6D3E8551FE3BD /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		2F3884F551D6A378814C8F645C0BF42F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		35CE1EE4E0D1C65DB14910A4BEFE8675 /* UICircularProgressRingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingView.swift; path = UICircularProgressRing/UICircularProgressRingView.swift; sourceTree = "<group>"; };
+		3DE9CA0D0E67A2C9401F0DB550BBDD51 /* Pods-Workout watch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout watch-resources.sh"; sourceTree = "<group>"; };
+		4233D900DCB3611B08EE60D18B6BC66C /* UICircularProgressRing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-umbrella.h"; sourceTree = "<group>"; };
+		42EFFC8D0C88F3FBFAC1AF45FC555596 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		4530A0FABF884ED509541D089D301496 /* Pods-Workout watchTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout watchTests-resources.sh"; sourceTree = "<group>"; };
+		5BD4E582038AA8B092B487391DFB1A5D /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		5EF860C0FB7F768A5147CE6630BF1CFA /* Pods-Workout watchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout watchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66721311DED112EA5118AFE1185D8DCC /* Pods_Workout_watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Workout_watch.framework; path = "Pods-Workout watch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1271852AD26C8BF1A449ACA4FF6533 /* Pods-Workout watchUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout watchUITests-frameworks.sh"; sourceTree = "<group>"; };
+		6BDF272A1C54A5ABC3E9CA6BA5FAA0E9 /* Pods-Workout watchUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workout watchUITests-umbrella.h"; sourceTree = "<group>"; };
+		6DA87FDF99FBEE46B95A5936C30BE277 /* Pods-Workout watch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workout watch-umbrella.h"; sourceTree = "<group>"; };
+		6FA309DAD75ED36EF7F60BAB6A64696B /* UICircularProgressRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UICircularProgressRing.framework; path = UICircularProgressRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		706ACBF172CBEC35DE8B5D4C28ADF27E /* Pods-Workout watchUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout watchUITests-resources.sh"; sourceTree = "<group>"; };
+		75583DF05C816B99E927ED275005C06F /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		7A9C97F2B013F598E49428C8DF236318 /* Pods-Workout watchUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Workout watchUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7EBB87AEF982789A2B85E0C105DCB1AE /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		85186602F83FCAAC06BAE437049AB6A8 /* Pods-Workout watch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Workout watch.modulemap"; sourceTree = "<group>"; };
+		8FB080979F88C734854369A9E6B2CB70 /* Pods-Workout watchUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Workout watchUITests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F6216EA91E3181A752C59D0DE3A5D4 /* Pods-Workout watchTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workout watchTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9E242071C40AC222B1EAC85EBDEA7470 /* Pods-Workout watchTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Workout watchTests-umbrella.h"; sourceTree = "<group>"; };
+		A23808E2D830B5F965C38E7E2577F191 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		A513D882CCCB4749B0145DD2D23702AD /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		A75FFF765A5C7D9DABC41B8FDB5E4933 /* Pods_Workout_watchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Workout_watchUITests.framework; path = "Pods-Workout watchUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF982F40952A885FA96C87D2C3C7084 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0452BD9A0F4D4E3AB9C69B2A072F5B8 /* Pods-Workout watch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Workout watch-dummy.m"; sourceTree = "<group>"; };
+		B7E307640D307D6C482FFED96EC708C9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA0DE0A78C526D0ED3F7F40A9D934CEC /* UICircularProgressRing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICircularProgressRing-dummy.m"; sourceTree = "<group>"; };
+		BB0A78F49D490714066F64C6D2790570 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		C1BD25503CC83D37A9DAB92D4ADFF9BB /* Pods-Workout watchTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Workout watchTests.modulemap"; sourceTree = "<group>"; };
+		C9B33240D0E8EC4AAACB1BE4DE61278F /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		CA61F873AA31D1C69277A8BA4C549C73 /* Pods-Workout watchTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Workout watchTests-dummy.m"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D24FF8FCEEAB1DDC8635EBEEE20E44D2 /* Pods-Workout watch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Workout watch-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D3B634FB82B82D7BC33C53D51CF53DA7 /* Pods-Workout watchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout watchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D80A083B8331B0F389888A65190152F6 /* UICircularProgressRingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingLayer.swift; path = UICircularProgressRing/UICircularProgressRingLayer.swift; sourceTree = "<group>"; };
+		D90CD5ECE83985D7C6E651C41189AE18 /* Pods-Workout watchUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workout watchUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D9D7BBB0E12ABE3F08DD85D72D41357A /* Pods_Workout_watchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Workout_watchTests.framework; path = "Pods-Workout watchTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCBEFCAD5FDBBCB7A271879231ECC536 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		E4824A89B57C8729D632288C304AFB4C /* UICircularProgressRing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UICircularProgressRing.modulemap; sourceTree = "<group>"; };
+		E50BE73B4ED054122BF582524613CDD6 /* Pods-Workout watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout watch.debug.xcconfig"; sourceTree = "<group>"; };
+		EBD4AF0CD509803A3F01B1F66329C6AA /* Pods-Workout watchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout watchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC74C276D960CA75FFC089BCBBDFD165 /* Pods-Workout watchTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Workout watchTests-frameworks.sh"; sourceTree = "<group>"; };
+		F2F77817B1DD3A4581B3C47431811697 /* Pods-Workout watch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Workout watch-acknowledgements.plist"; sourceTree = "<group>"; };
+		FE7A15726C306B2A3AF3368133B22442 /* Pods-Workout watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Workout watch.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40F21EF8C4307A1B0D753ACDDA094C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C1946476AD568E1A280F3BE6E87293 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48083CD14EA14E131DC66DB8C6749664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFC412B364FB5AFA70EF90CBB793041C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F02676AA39C1A1272F00F1A51B22014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C3681B36BEDF053229C4C67144D3EF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD3DE76737CE8CAB92D6757349BE4F35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB4F64F457869CE4E4F979BC57F93C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		023AC7EDC548E4D2BF0E047F35C257F1 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				51905A6E38677BB58C4EC64180BC14CB /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		15CD254E0C5BC6C9FA9F7023220F476C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B33240D0E8EC4AAACB1BE4DE61278F /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		194E959AC73955BBAF0D99AC52495661 /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				7EBB87AEF982789A2B85E0C105DCB1AE /* GTMNSData+zlib.h */,
+				068DC41E22B4EF398A7725879A730BDD /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		41DD12DA689B7C020953C3ABEED50355 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				596B97619D6EA3C2F0530DD1EA5051DC /* Pods-Workout watch */,
+				B4AF32CAFCAB17534889EB7DD616B3E6 /* Pods-Workout watchTests */,
+				7775CBAA230795D6FDD029E3399BC661 /* Pods-Workout watchUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		426DB8481305A393877BB177B2851BC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F3884F551D6A378814C8F645C0BF42F /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CC14F8487B6F6A479054F46F40A2431 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C2470ED8BFF93D70B3475DF102DA330 /* GoogleToolboxForMac.modulemap */,
+				2A2B6BE6FDC6599785C6D3E8551FE3BD /* GoogleToolboxForMac.xcconfig */,
+				BB0A78F49D490714066F64C6D2790570 /* GoogleToolboxForMac-dummy.m */,
+				75583DF05C816B99E927ED275005C06F /* GoogleToolboxForMac-prefix.pch */,
+				A23808E2D830B5F965C38E7E2577F191 /* GoogleToolboxForMac-umbrella.h */,
+				B7E307640D307D6C482FFED96EC708C9 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		50A3AD06439C29F010C94D0F6F3CC884 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				42EFFC8D0C88F3FBFAC1AF45FC555596 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		51905A6E38677BB58C4EC64180BC14CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BD4E582038AA8B092B487391DFB1A5D /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		596B97619D6EA3C2F0530DD1EA5051DC /* Pods-Workout watch */ = {
+			isa = PBXGroup;
+			children = (
+				0120751E8C722139295D34AD6F8CA118 /* Info.plist */,
+				85186602F83FCAAC06BAE437049AB6A8 /* Pods-Workout watch.modulemap */,
+				D24FF8FCEEAB1DDC8635EBEEE20E44D2 /* Pods-Workout watch-acknowledgements.markdown */,
+				F2F77817B1DD3A4581B3C47431811697 /* Pods-Workout watch-acknowledgements.plist */,
+				B0452BD9A0F4D4E3AB9C69B2A072F5B8 /* Pods-Workout watch-dummy.m */,
+				0D0A03F3AFDB75B896084CBB81445DF8 /* Pods-Workout watch-frameworks.sh */,
+				3DE9CA0D0E67A2C9401F0DB550BBDD51 /* Pods-Workout watch-resources.sh */,
+				6DA87FDF99FBEE46B95A5936C30BE277 /* Pods-Workout watch-umbrella.h */,
+				E50BE73B4ED054122BF582524613CDD6 /* Pods-Workout watch.debug.xcconfig */,
+				FE7A15726C306B2A3AF3368133B22442 /* Pods-Workout watch.release.xcconfig */,
+			);
+			name = "Pods-Workout watch";
+			path = "Target Support Files/Pods-Workout watch";
+			sourceTree = "<group>";
+		};
+		5E064CB22B6CB1D2D34ED3D3C4DAF557 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADF982F40952A885FA96C87D2C3C7084 /* GoogleToolboxForMac.framework */,
+				66721311DED112EA5118AFE1185D8DCC /* Pods_Workout_watch.framework */,
+				D9D7BBB0E12ABE3F08DD85D72D41357A /* Pods_Workout_watchTests.framework */,
+				A75FFF765A5C7D9DABC41B8FDB5E4933 /* Pods_Workout_watchUITests.framework */,
+				6FA309DAD75ED36EF7F60BAB6A64696B /* UICircularProgressRing.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7775CBAA230795D6FDD029E3399BC661 /* Pods-Workout watchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2310B1F96825127A0AADFD44ECAB97CD /* Info.plist */,
+				25A5E50DD54D9C39B8F41B5D0D46912F /* Pods-Workout watchUITests.modulemap */,
+				7A9C97F2B013F598E49428C8DF236318 /* Pods-Workout watchUITests-acknowledgements.markdown */,
+				D90CD5ECE83985D7C6E651C41189AE18 /* Pods-Workout watchUITests-acknowledgements.plist */,
+				8FB080979F88C734854369A9E6B2CB70 /* Pods-Workout watchUITests-dummy.m */,
+				6A1271852AD26C8BF1A449ACA4FF6533 /* Pods-Workout watchUITests-frameworks.sh */,
+				706ACBF172CBEC35DE8B5D4C28ADF27E /* Pods-Workout watchUITests-resources.sh */,
+				6BDF272A1C54A5ABC3E9CA6BA5FAA0E9 /* Pods-Workout watchUITests-umbrella.h */,
+				EBD4AF0CD509803A3F01B1F66329C6AA /* Pods-Workout watchUITests.debug.xcconfig */,
+				D3B634FB82B82D7BC33C53D51CF53DA7 /* Pods-Workout watchUITests.release.xcconfig */,
+			);
+			name = "Pods-Workout watchUITests";
+			path = "Target Support Files/Pods-Workout watchUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9E47CA31FECD8EBBDB7E626C17CC62E3 /* Pods */,
+				5E064CB22B6CB1D2D34ED3D3C4DAF557 /* Products */,
+				41DD12DA689B7C020953C3ABEED50355 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EAF740296CE19CF9DF829039514EA4F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				07B6E2829D217C0E94292F17896D38F4 /* Info.plist */,
+				E4824A89B57C8729D632288C304AFB4C /* UICircularProgressRing.modulemap */,
+				274C729A9BFB5EB4B5C513A5C726D9C7 /* UICircularProgressRing.xcconfig */,
+				BA0DE0A78C526D0ED3F7F40A9D934CEC /* UICircularProgressRing-dummy.m */,
+				21D18D0A8EEE53BDD83EF3EB2148C883 /* UICircularProgressRing-prefix.pch */,
+				4233D900DCB3611B08EE60D18B6BC66C /* UICircularProgressRing-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UICircularProgressRing";
+			sourceTree = "<group>";
+		};
+		82381AC30BCA724D643838085AA6CEE2 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				15CD254E0C5BC6C9FA9F7023220F476C /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		842B4F3556C167A809F5B4A55B858A37 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				B548F791923696798009EE7348D0681F /* Defines */,
+				194E959AC73955BBAF0D99AC52495661 /* NSData+zlib */,
+				4CC14F8487B6F6A479054F46F40A2431 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		94DF7252D48BD3C944BE8F2580D988DA /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				9DA6660544393DEB68957720621D911A /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		9DA6660544393DEB68957720621D911A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCBEFCAD5FDBBCB7A271879231ECC536 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E47CA31FECD8EBBDB7E626C17CC62E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF066003C5BB9790D44867FEB02FD8 /* Firebase */,
+				94DF7252D48BD3C944BE8F2580D988DA /* FirebaseAnalytics */,
+				023AC7EDC548E4D2BF0E047F35C257F1 /* FirebaseCore */,
+				82381AC30BCA724D643838085AA6CEE2 /* FirebaseInstanceID */,
+				FC4540FCD4A7083FDEFCFA05F1709638 /* Google-Mobile-Ads-SDK */,
+				842B4F3556C167A809F5B4A55B858A37 /* GoogleToolboxForMac */,
+				B701B602B94345F064A05EBD10CE8C80 /* UICircularProgressRing */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4AF32CAFCAB17534889EB7DD616B3E6 /* Pods-Workout watchTests */ = {
+			isa = PBXGroup;
+			children = (
+				05AB07ECCFB0B1E47413D88F8D393D3A /* Info.plist */,
+				C1BD25503CC83D37A9DAB92D4ADFF9BB /* Pods-Workout watchTests.modulemap */,
+				1837800E115DE4A9DC40C4F308FC5C31 /* Pods-Workout watchTests-acknowledgements.markdown */,
+				94F6216EA91E3181A752C59D0DE3A5D4 /* Pods-Workout watchTests-acknowledgements.plist */,
+				CA61F873AA31D1C69277A8BA4C549C73 /* Pods-Workout watchTests-dummy.m */,
+				EC74C276D960CA75FFC089BCBBDFD165 /* Pods-Workout watchTests-frameworks.sh */,
+				4530A0FABF884ED509541D089D301496 /* Pods-Workout watchTests-resources.sh */,
+				9E242071C40AC222B1EAC85EBDEA7470 /* Pods-Workout watchTests-umbrella.h */,
+				5EF860C0FB7F768A5147CE6630BF1CFA /* Pods-Workout watchTests.debug.xcconfig */,
+				03194CD77E3660677719B81297B824A1 /* Pods-Workout watchTests.release.xcconfig */,
+			);
+			name = "Pods-Workout watchTests";
+			path = "Target Support Files/Pods-Workout watchTests";
+			sourceTree = "<group>";
+		};
+		B548F791923696798009EE7348D0681F /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				A513D882CCCB4749B0145DD2D23702AD /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		B701B602B94345F064A05EBD10CE8C80 /* UICircularProgressRing */ = {
+			isa = PBXGroup;
+			children = (
+				2235F5BC382E57F310FAF45EDAD07CCE /* UICircularProgressRing.h */,
+				03174A50E97D5F9BE3BD43F50C647238 /* UICircularProgressRingDelegate.swift */,
+				D80A083B8331B0F389888A65190152F6 /* UICircularProgressRingLayer.swift */,
+				35CE1EE4E0D1C65DB14910A4BEFE8675 /* UICircularProgressRingView.swift */,
+				7EAF740296CE19CF9DF829039514EA4F /* Support Files */,
+			);
+			name = UICircularProgressRing;
+			path = UICircularProgressRing;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4FF066003C5BB9790D44867FEB02FD8 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				50A3AD06439C29F010C94D0F6F3CC884 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		FC4540FCD4A7083FDEFCFA05F1709638 /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				426DB8481305A393877BB177B2851BC3 /* Frameworks */,
+			);
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0198E6E4D708E964A454F37D772C0C63 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C403FA0C5C9626DA4C7F238219385D36 /* Pods-Workout watch-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32A220BF948B2D3B640E9F0D89138865 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582CD5EBD114F93AA0FB12C11422D9AA /* Pods-Workout watchTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		850C434538232B90FA84CF4765D97858 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836B02EA0EE134816790D0030408D5EC /* UICircularProgressRing-umbrella.h in Headers */,
+				8FDD99A0219790E627DEE4D0C7A7217E /* UICircularProgressRing.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B78CCCA1A8F1833672468A3A16616945 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B711BDEA19F1ED687755559A8588A518 /* Pods-Workout watchUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
+			buildPhases = (
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = ADF982F40952A885FA96C87D2C3C7084 /* GoogleToolboxForMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		37B6F87BABA454BBDBA730EABCB3F9D2 /* Pods-Workout watchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B12A9AF8DF3E90FC8745D3F149E03EF8 /* Build configuration list for PBXNativeTarget "Pods-Workout watchUITests" */;
+			buildPhases = (
+				529B8DCCCF58B1B91C8BAC8DF10C3357 /* Sources */,
+				8F02676AA39C1A1272F00F1A51B22014 /* Frameworks */,
+				B78CCCA1A8F1833672468A3A16616945 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Workout watchUITests";
+			productName = "Pods-Workout watchUITests";
+			productReference = A75FFF765A5C7D9DABC41B8FDB5E4933 /* Pods_Workout_watchUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B65CE3A85BA6272998302648B0CD9315 /* Pods-Workout watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4836CE3E21421A85089C0354E22620B /* Build configuration list for PBXNativeTarget "Pods-Workout watch" */;
+			buildPhases = (
+				DE533AA99EA82460C6B6AED21FC650EF /* Sources */,
+				48083CD14EA14E131DC66DB8C6749664 /* Frameworks */,
+				0198E6E4D708E964A454F37D772C0C63 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D04EC76A66A4FE0E7C6B8AA54F38CC6 /* PBXTargetDependency */,
+				8A3F366805DAB9EED1FEBA190338B6B4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Workout watch";
+			productName = "Pods-Workout watch";
+			productReference = 66721311DED112EA5118AFE1185D8DCC /* Pods_Workout_watch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C60C664E275B25898BF49EC41E2D4236 /* UICircularProgressRing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBEEF55B2BD27748D7570EAA0422A1F /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */;
+			buildPhases = (
+				A75AA5B632F1F7BAF23E426B06918AB1 /* Sources */,
+				AD3DE76737CE8CAB92D6757349BE4F35 /* Frameworks */,
+				850C434538232B90FA84CF4765D97858 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UICircularProgressRing;
+			productName = UICircularProgressRing;
+			productReference = 6FA309DAD75ED36EF7F60BAB6A64696B /* UICircularProgressRing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EE8A225B32965FB377741F5F8B03A9FD /* Pods-Workout watchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1F6790DAAE9AAC4A00898AFE53C33FE /* Build configuration list for PBXNativeTarget "Pods-Workout watchTests" */;
+			buildPhases = (
+				F8FA22FDD3D67346BB756F94E0790C25 /* Sources */,
+				40F21EF8C4307A1B0D753ACDDA094C31 /* Frameworks */,
+				32A220BF948B2D3B640E9F0D89138865 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Workout watchTests";
+			productName = "Pods-Workout watchTests";
+			productReference = D9D7BBB0E12ABE3F08DD85D72D41357A /* Pods_Workout_watchTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5E064CB22B6CB1D2D34ED3D3C4DAF557 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
+				B65CE3A85BA6272998302648B0CD9315 /* Pods-Workout watch */,
+				EE8A225B32965FB377741F5F8B03A9FD /* Pods-Workout watchTests */,
+				37B6F87BABA454BBDBA730EABCB3F9D2 /* Pods-Workout watchUITests */,
+				C60C664E275B25898BF49EC41E2D4236 /* UICircularProgressRing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		529B8DCCCF58B1B91C8BAC8DF10C3357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0A577D4E96A7A19C708DF48132F07F /* Pods-Workout watchUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75AA5B632F1F7BAF23E426B06918AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C69F3B8024F1AD4A68ADCC5034802 /* UICircularProgressRing-dummy.m in Sources */,
+				37CAA59D527B398F295F093386B2497D /* UICircularProgressRingDelegate.swift in Sources */,
+				61551DF0879338D711E8F2483D6C86D5 /* UICircularProgressRingLayer.swift in Sources */,
+				17304741CA43A7EB226ABDCFFB6CADB5 /* UICircularProgressRingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE533AA99EA82460C6B6AED21FC650EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29639C53337ABA5F3A0ECFADDAD76C20 /* Pods-Workout watch-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8FA22FDD3D67346BB756F94E0790C25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06039C95FFD23F70EFA39030EA0B2CFB /* Pods-Workout watchTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D04EC76A66A4FE0E7C6B8AA54F38CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = F5424CA0702A4D78A1D2C43AB4192EFA /* PBXContainerItemProxy */;
+		};
+		8A3F366805DAB9EED1FEBA190338B6B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICircularProgressRing;
+			target = C60C664E275B25898BF49EC41E2D4236 /* UICircularProgressRing */;
+			targetProxy = C550E268A333FC2D35337AC4CA025AD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03DF6C59947D3B6F6E40E2D8BB537289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B634FB82B82D7BC33C53D51CF53DA7 /* Pods-Workout watchUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout watchUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout watchUITests/Pods-Workout watchUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_watchUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		13FEBE30B5BB2E9384F9ACC2317F8E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50BE73B4ED054122BF582524613CDD6 /* Pods-Workout watch.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout watch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout watch/Pods-Workout watch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_watch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15BE787DE0C015AE974352065B0066C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF860C0FB7F768A5147CE6630BF1CFA /* Pods-Workout watchTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout watchTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout watchTests/Pods-Workout watchTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_watchTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2D8739B6738103920A7156081E619A39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274C729A9BFB5EB4B5C513A5C726D9C7 /* UICircularProgressRing.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICircularProgressRing/UICircularProgressRing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UICircularProgressRing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UICircularProgressRing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E59CDEE62F1560CF765B241DDCADF3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03194CD77E3660677719B81297B824A1 /* Pods-Workout watchTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout watchTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout watchTests/Pods-Workout watchTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_watchTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC24BB9C3712E101D8409CF474DFC37A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBD4AF0CD509803A3F01B1F66329C6AA /* Pods-Workout watchUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout watchUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout watchUITests/Pods-Workout watchUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_watchUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D60CD877A708870E2BE96B83BA32F883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2B6BE6FDC6599785C6D3E8551FE3BD /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E433C09D6DAA74EB408A0E397521E022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274C729A9BFB5EB4B5C513A5C726D9C7 /* UICircularProgressRing.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICircularProgressRing/UICircularProgressRing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UICircularProgressRing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UICircularProgressRing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F066921CBDBDB5F45795E50FBC5AC972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2B6BE6FDC6599785C6D3E8551FE3BD /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCB7D8A3CD20B2596BF86B445E908BE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE7A15726C306B2A3AF3368133B22442 /* Pods-Workout watch.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Workout watch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Workout watch/Pods-Workout watch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Workout_watch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBEEF55B2BD27748D7570EAA0422A1F /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E433C09D6DAA74EB408A0E397521E022 /* Debug */,
+				2D8739B6738103920A7156081E619A39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B12A9AF8DF3E90FC8745D3F149E03EF8 /* Build configuration list for PBXNativeTarget "Pods-Workout watchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC24BB9C3712E101D8409CF474DFC37A /* Debug */,
+				03DF6C59947D3B6F6E40E2D8BB537289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60CD877A708870E2BE96B83BA32F883 /* Debug */,
+				F066921CBDBDB5F45795E50FBC5AC972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4836CE3E21421A85089C0354E22620B /* Build configuration list for PBXNativeTarget "Pods-Workout watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13FEBE30B5BB2E9384F9ACC2317F8E28 /* Debug */,
+				FCB7D8A3CD20B2596BF86B445E908BE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1F6790DAAE9AAC4A00898AFE53C33FE /* Build configuration list for PBXNativeTarget "Pods-Workout watchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BE787DE0C015AE974352065B0066C2 /* Debug */,
+				3E59CDEE62F1560CF765B241DDCADF3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

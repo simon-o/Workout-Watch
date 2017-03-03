@@ -9,15 +9,6 @@
 import UIKit
 import AVFoundation
 
-extension NSDate {
-    func dayOfWeek() -> Int! {
-        guard
-            let cal: NSCalendar = NSCalendar.currentCalendar(),
-            let comp: NSDateComponents = cal.components(.Weekday, fromDate: self) else { return nil }
-        return comp.weekday
-    }
-}
-
 class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var picker: UIPickerView!
@@ -28,8 +19,8 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var setLabel: UILabel!
     @IBOutlet weak var locker: UIButton!
     
-    var startTime = NSTimeInterval()
-    var timer = NSTimer()
+    var startTime = TimeInterval()
+    var timer = Timer()
     var minuteSet = "0"
     var secondesSet = "30"
     var reset = true
@@ -58,10 +49,10 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     var audioPlayer = AVAudioPlayer()
     
-    override func viewWillAppear(animated: Bool) {
-        let defaults = NSUserDefaults.standardUserDefaults()
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
         
-        let i = defaults.doubleForKey("numberSet")
+        let i = defaults.double(forKey: "numberSet")
         stringOne = i
         setLabel.text = "set : \(set)/\(i)"
         
@@ -69,12 +60,12 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(!NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce"))
+        if(!UserDefaults.standard.bool(forKey: "HasLaunchedOnce"))
         {
             print("first")
-            performSegueWithIdentifier("tuto", sender: self)
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
-            NSUserDefaults.standardUserDefaults().synchronize()
+            performSegue(withIdentifier: "tuto", sender: self)
+            UserDefaults.standard.set(true, forKey: "HasLaunchedOnce")
+            UserDefaults.standard.synchronize()
         }
         self.navigationItem .setHidesBackButton(true , animated: true)
         
@@ -94,7 +85,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         updateLabel()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         setExercise()
     }
     
@@ -105,64 +96,64 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func setExercise()
     {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        if (defaults.objectForKey("\(NSDate().dayOfWeek())Name") != nil) {
-            dictName = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Name")
+        if (defaults.object(forKey: "\(Date().dayOfWeek())Name") != nil) {
+            dictName = defaults.mutableArrayValue(forKey: "\(Date().dayOfWeek())Name")
             if IndexExercise < dictName.count{
-                typeofExercise.text = dictName.objectAtIndex(IndexExercise) as? String
+                typeofExercise.text = dictName.object(at: IndexExercise) as? String
             }
             else{
                 stop(self)
             }
         }
-        if (defaults.objectForKey("\(NSDate().dayOfWeek())Set") != nil) {
-            dictSet = defaults.mutableArrayValueForKey("\(NSDate().dayOfWeek())Set")
+        if (defaults.object(forKey: "\(Date().dayOfWeek())Set") != nil) {
+            dictSet = defaults.mutableArrayValue(forKey: "\(Date().dayOfWeek())Set")
             if IndexExercise < dictSet.count{
-                stringOne = dictSet.objectAtIndex(IndexExercise) as! Double
+                stringOne = dictSet.object(at: IndexExercise) as! Double
                 setNumber = Int(stringOne)
                 setLabel.text = "set : \(set)/\(setNumber)"
             }
         }
     }
     
-    @IBAction func start(sender:AnyObject){
-        if !timer.valid && locker.imageForState(.Normal) == UIImage.animatedImageNamed("lock.png", duration: 0){
+    @IBAction func start(_ sender:AnyObject){
+        if !timer.isValid && locker.image(for: UIControlState()) == UIImage.animatedImageNamed("lock.png", duration: 0){
             if reset == true{
                 //play first or stop
-                stopButton.setTitle("Stop", forState: .Normal)
+                stopButton.setTitle("Stop", for: UIControlState())
                 let aSelector : Selector = #selector(StopWatchViewController.updateTime)
-                timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+                timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
                 reset = false
                 if tmp != 0{
-                    startTime = startTime + (NSDate.timeIntervalSinceReferenceDate() - tmp)
+                    startTime = startTime + (Date.timeIntervalSinceReferenceDate - tmp)
                 }
                 else
                 {
-                    startTime = NSDate.timeIntervalSinceReferenceDate()
+                    startTime = Date.timeIntervalSinceReferenceDate
                 }
             }
             else{
                 //play if resume
                 let aSelector : Selector = #selector(StopWatchViewController.updateTime)
-                timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-                startTime = NSDate.timeIntervalSinceReferenceDate()
+                timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+                startTime = Date.timeIntervalSinceReferenceDate
             }
         }
     }
     
-    @IBAction func stop(sender:AnyObject){
-         if timer.valid{
+    @IBAction func stop(_ sender:AnyObject){
+         if timer.isValid{
             //stop
             timer.invalidate()
-            tmp = NSDate.timeIntervalSinceReferenceDate()
-            stopButton.setTitle("Reset", forState: .Normal)
+            tmp = Date.timeIntervalSinceReferenceDate
+            stopButton.setTitle("Reset", for: UIControlState())
             reset = true
         }
         else{
             //resume
             displayTime.text = "00:00"
-            stopButton.setTitle("Stop", forState: .Normal)
+            stopButton.setTitle("Stop", for: UIControlState())
             startTime = 0
             set = 0
             IndexExercise = 0
@@ -171,17 +162,17 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    @IBAction func lock(sender:AnyObject){
-        if locker.imageForState(.Normal) == UIImage.animatedImageNamed("lock.png", duration: 0){
-            locker.setImage(UIImage.animatedImageNamed("security.png", duration: 0), forState: .Normal)
-            picker.userInteractionEnabled = true
-            picker.hidden = false
+    @IBAction func lock(_ sender:AnyObject){
+        if locker.image(for: UIControlState()) == UIImage.animatedImageNamed("lock.png", duration: 0){
+            locker.setImage(UIImage.animatedImageNamed("security.png", duration: 0), for: UIControlState())
+            picker.isUserInteractionEnabled = true
+            picker.isHidden = false
             timer.invalidate()
         }
         else {
-            locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), forState: .Normal)
-            picker.userInteractionEnabled = false
-            picker.hidden = true
+            locker.setImage(UIImage.animatedImageNamed("lock.png", duration: 0), for: UIControlState())
+            picker.isUserInteractionEnabled = false
+            picker.isHidden = true
             //ADS
             //load()
         }
@@ -190,35 +181,35 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func updateLabel(){
         let sizeComponent = PickerComponent.min.rawValue
         let toppingComponent = PickerComponent.sec.rawValue
-        minuteSet = pickerData[sizeComponent][picker.selectedRowInComponent(sizeComponent)]
-        secondesSet = pickerData[toppingComponent][picker.selectedRowInComponent(toppingComponent)]
+        minuteSet = pickerData[sizeComponent][picker.selectedRow(inComponent: sizeComponent)]
+        secondesSet = pickerData[toppingComponent][picker.selectedRow(inComponent: toppingComponent)]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         updateLabel()
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return pickerData.count
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData[component].count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[component][row]
     }
     
     func updateTime() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        let currentTime = Date.timeIntervalSinceReferenceDate
         elapsedTime = currentTime - startTime
         
         let minutes = UInt8(elapsedTime/60.0)
-        elapsedTime -= (NSTimeInterval(minutes)*60)
+        elapsedTime -= (TimeInterval(minutes)*60)
         let seconds = UInt8(elapsedTime)
         
-        elapsedTime -= NSTimeInterval(seconds)
+        elapsedTime -= TimeInterval(seconds)
         
         //let fraction = UInt8(elapsedTime * 100)
         
@@ -228,11 +219,11 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         displayTime.text = "\(strMinutes):\(strSeconds)"
         if strMinutes >= minuteSet && strSeconds >= secondesSet{
-            let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Beep Sound", ofType: "mp3")!)
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Beep Sound", ofType: "mp3")!)
             do{
-                audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
                 
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, withOptions: AVAudioSessionCategoryOptions.MixWithOthers)
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.mixWithOthers)
                 try AVAudioSession.sharedInstance().setActive(true)
                 
                 audioPlayer.prepareToPlay()
@@ -243,14 +234,14 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
             timer.invalidate()
             let aSelector : Selector = #selector(StopWatchViewController.updateTime)
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-            startTime = NSDate.timeIntervalSinceReferenceDate()
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = Date.timeIntervalSinceReferenceDate
             
             set += 1
             if set >= Int(stringOne!){
                 IndexExercise = IndexExercise + 1
                 setExercise()
-                if timer.valid{
+                if timer.isValid{
                     set = 0
                 }
             }

@@ -14,15 +14,15 @@ class TutoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TutoViewController.handleTap(_:)))
         self.view.addGestureRecognizer(tapGesture)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.navigationItem .setHidesBackButton(true , animated: true)
     }
     
-    func handleTap(sender : UIView) {
+    func handleTap(_ sender : UIView) {
         
         if ImageViewFortuto.image == UIImage(named: "1"){
             ImageViewFortuto.image = UIImage(named: "2")
@@ -34,10 +34,10 @@ class TutoViewController: UIViewController {
             ImageViewFortuto.image = UIImage(named: "4")
         }
         else if ImageViewFortuto.image == UIImage(named: "4"){
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            self.navigationController?.popToRootViewController(animated: true)
         }
         else{
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 

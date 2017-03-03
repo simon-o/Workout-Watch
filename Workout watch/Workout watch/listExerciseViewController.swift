@@ -18,7 +18,7 @@ class listExerciseViewController: UIViewController {
     var day:String?
     
     
-    @IBAction func clickStepper(sender: AnyObject) {
+    @IBAction func clickStepper(_ sender: AnyObject) {
         if stepper.value > 15
         {
             stepper.value = 15
@@ -41,10 +41,10 @@ class listExerciseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embed" {
-            containerViewController = segue.destinationViewController as? exerciseTableViewController
-            containerViewController?.day = day
+            containerViewController = segue.destination as? exerciseTableViewController
+            containerViewController?.day = day!
         }
     }
  

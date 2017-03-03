@@ -1,0 +1,6 @@
+framework module Pods_Workout_watchTests {
+  umbrella header "Pods-Workout watchTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

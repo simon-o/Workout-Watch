@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192E5AD617B9EE486764A86E /* Pods_Workout_watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF5B21213D464D8953BE23 /* Pods_Workout_watch.framework */; };
 		D61806C41CAD765D00976284 /* listExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61806C31CAD765D00976284 /* listExerciseViewController.swift */; };
 		D61806C61CAD767E00976284 /* exerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61806C51CAD767E00976284 /* exerciseTableViewController.swift */; };
 		D61806C81CADAA1800976284 /* exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61806C71CADAA1800976284 /* exerciseTableViewCell.swift */; };
@@ -16,11 +17,14 @@
 		D63170D61CAA00E500526C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63170D41CAA00E500526C47 /* LaunchScreen.storyboard */; };
 		D63170E11CAA00E500526C47 /* Workout_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170E01CAA00E500526C47 /* Workout_watchTests.swift */; };
 		D63170EC1CAA00E500526C47 /* Workout_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63170EB1CAA00E500526C47 /* Workout_watchUITests.swift */; };
+		D6465FEE1E52F639003745CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6465FED1E52F639003745CB /* ViewController.swift */; };
 		D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */; };
 		D6B6F3191CD15D1200C0D835 /* TutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6F3181CD15D1200C0D835 /* TutoViewController.swift */; };
 		D6C6DF271CABDD4100B9796A /* Beep Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */; };
 		D6C6DF291CAC8D3100B9796A /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C6DF281CAC8D3100B9796A /* settingViewController.swift */; };
 		D6C7510C1CAE81B200FB2422 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */; };
+		D9DAFA317BA0DABEC3C98BDE /* Pods_Workout_watchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBA30C6C7CF017EE42E9B9E /* Pods_Workout_watchUITests.framework */; };
+		E0AE6770342AC73DAF28F478 /* Pods_Workout_watchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FDAC8B7B10BA3E73976B36 /* Pods_Workout_watchTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15FF5B21213D464D8953BE23 /* Pods_Workout_watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout_watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		188C68105F2F9668C788EC9E /* Pods-Workout watchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout watchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout watchTests/Pods-Workout watchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		248F03CAC1198D56CBA28EAA /* Pods-Workout watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout watch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout watch/Pods-Workout watch.debug.xcconfig"; sourceTree = "<group>"; };
+		2C9B4A9B8A0E48081A2FD83F /* Pods-Workout watchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout watchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout watchUITests/Pods-Workout watchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		65FDAC8B7B10BA3E73976B36 /* Pods_Workout_watchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout_watchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CBA30C6C7CF017EE42E9B9E /* Pods_Workout_watchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout_watchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61806C31CAD765D00976284 /* listExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listExerciseViewController.swift; sourceTree = "<group>"; };
 		D61806C51CAD767E00976284 /* exerciseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseTableViewController.swift; sourceTree = "<group>"; };
 		D61806C71CADAA1800976284 /* exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exerciseTableViewCell.swift; sourceTree = "<group>"; };
@@ -56,11 +66,15 @@
 		D63170E71CAA00E500526C47 /* Workout watchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Workout watchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63170EB1CAA00E500526C47 /* Workout_watchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_watchUITests.swift; sourceTree = "<group>"; };
 		D63170ED1CAA00E500526C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6465FED1E52F639003745CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopWatchViewController.swift; path = ../StopWatchViewController.swift; sourceTree = "<group>"; };
 		D6B6F3181CD15D1200C0D835 /* TutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutoViewController.swift; sourceTree = "<group>"; };
 		D6C6DF261CABDD4100B9796A /* Beep Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Sound.mp3"; sourceTree = "<group>"; };
 		D6C6DF281CAC8D3100B9796A /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayTableViewController.swift; path = ../DayTableViewController.swift; sourceTree = "<group>"; };
+		E56D1EADC858CB50E31A4EA4 /* Pods-Workout watchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout watchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout watchUITests/Pods-Workout watchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFD55FEF85B5EBB581D610D3 /* Pods-Workout watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout watch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout watch/Pods-Workout watch.release.xcconfig"; sourceTree = "<group>"; };
+		F72DF7D9B95880BB818B567C /* Pods-Workout watchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout watchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout watchTests/Pods-Workout watchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192E5AD617B9EE486764A86E /* Pods_Workout_watch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AE6770342AC73DAF28F478 /* Pods_Workout_watchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DAFA317BA0DABEC3C98BDE /* Pods_Workout_watchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		168FC48244E7698378BBC608 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FF5B21213D464D8953BE23 /* Pods_Workout_watch.framework */,
+				65FDAC8B7B10BA3E73976B36 /* Pods_Workout_watchTests.framework */,
+				8CBA30C6C7CF017EE42E9B9E /* Pods_Workout_watchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51101509693DA6F51E9A3136 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				248F03CAC1198D56CBA28EAA /* Pods-Workout watch.debug.xcconfig */,
+				EFD55FEF85B5EBB581D610D3 /* Pods-Workout watch.release.xcconfig */,
+				188C68105F2F9668C788EC9E /* Pods-Workout watchTests.debug.xcconfig */,
+				F72DF7D9B95880BB818B567C /* Pods-Workout watchTests.release.xcconfig */,
+				E56D1EADC858CB50E31A4EA4 /* Pods-Workout watchUITests.debug.xcconfig */,
+				2C9B4A9B8A0E48081A2FD83F /* Pods-Workout watchUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D63170BF1CAA00E400526C47 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +135,8 @@
 				D63170DF1CAA00E500526C47 /* Workout watchTests */,
 				D63170EA1CAA00E500526C47 /* Workout watchUITests */,
 				D63170C91CAA00E500526C47 /* Products */,
+				51101509693DA6F51E9A3136 /* Pods */,
+				168FC48244E7698378BBC608 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +153,7 @@
 		D63170CA1CAA00E500526C47 /* Workout watch */ = {
 			isa = PBXGroup;
 			children = (
+				D6465FED1E52F639003745CB /* ViewController.swift */,
 				D6C7510B1CAE81B200FB2422 /* DayTableViewController.swift */,
 				D6AD02DA1CAAF153005B4EFE /* StopWatchViewController.swift */,
 				D6C6DF281CAC8D3100B9796A /* settingViewController.swift */,
@@ -153,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63170F01CAA00E500526C47 /* Build configuration list for PBXNativeTarget "Workout watch" */;
 			buildPhases = (
+				7CC6C0E33B895F82C9CE3B6A /* [CP] Check Pods Manifest.lock */,
 				D63170C41CAA00E400526C47 /* Sources */,
 				D63170C51CAA00E400526C47 /* Frameworks */,
 				D63170C61CAA00E400526C47 /* Resources */,
+				070E6C5AD61D5D356FF9449D /* [CP] Embed Pods Frameworks */,
+				F01CAB9FA8867A09EFF31EA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63170F31CAA00E500526C47 /* Build configuration list for PBXNativeTarget "Workout watchTests" */;
 			buildPhases = (
+				519E80905C46598C3776E4C2 /* [CP] Check Pods Manifest.lock */,
 				D63170D81CAA00E500526C47 /* Sources */,
 				D63170D91CAA00E500526C47 /* Frameworks */,
 				D63170DA1CAA00E500526C47 /* Resources */,
+				5579DFFC4AB6604EA4522202 /* [CP] Embed Pods Frameworks */,
+				785E12E576F5E7825F5494CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63170F61CAA00E500526C47 /* Build configuration list for PBXNativeTarget "Workout watchUITests" */;
 			buildPhases = (
+				7340C1B2193E7DC393FD70AF /* [CP] Check Pods Manifest.lock */,
 				D63170E31CAA00E500526C47 /* Sources */,
 				D63170E41CAA00E500526C47 /* Frameworks */,
 				D63170E51CAA00E500526C47 /* Resources */,
+				ED14D98E1ADC766B4CFC24B7 /* [CP] Embed Pods Frameworks */,
+				4CAEB13EACDDAD28AE29C351 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,18 +267,21 @@
 					D63170C71CAA00E400526C47 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 43N6QXKADX;
+						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
 					D63170DB1CAA00E500526C47 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = D63170C71CAA00E400526C47;
 					};
 					D63170E61CAA00E500526C47 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = D63170C71CAA00E400526C47;
 					};
 				};
@@ -279,6 +334,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		070E6C5AD61D5D356FF9449D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout watch/Pods-Workout watch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CAEB13EACDDAD28AE29C351 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout watchUITests/Pods-Workout watchUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		519E80905C46598C3776E4C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5579DFFC4AB6604EA4522202 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout watchTests/Pods-Workout watchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7340C1B2193E7DC393FD70AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		785E12E576F5E7825F5494CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout watchTests/Pods-Workout watchTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CC6C0E33B895F82C9CE3B6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED14D98E1ADC766B4CFC24B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout watchUITests/Pods-Workout watchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F01CAB9FA8867A09EFF31EA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout watch/Pods-Workout watch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D63170C41CAA00E400526C47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -287,6 +480,7 @@
 				D61806C41CAD765D00976284 /* listExerciseViewController.swift in Sources */,
 				D6AD02DB1CAAF153005B4EFE /* StopWatchViewController.swift in Sources */,
 				D61806C61CAD767E00976284 /* exerciseTableViewController.swift in Sources */,
+				D6465FEE1E52F639003745CB /* ViewController.swift in Sources */,
 				D61806C81CADAA1800976284 /* exerciseTableViewCell.swift in Sources */,
 				D6C7510C1CAE81B200FB2422 /* DayTableViewController.swift in Sources */,
 				D63170CC1CAA00E500526C47 /* AppDelegate.swift in Sources */,
@@ -431,70 +625,84 @@
 		};
 		D63170F11CAA00E500526C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 248F03CAC1198D56CBA28EAA /* Pods-Workout watch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Workout watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Grow-muscle.Workout-watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D63170F21CAA00E500526C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD55FEF85B5EBB581D610D3 /* Pods-Workout watch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Workout watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Grow-muscle.Workout-watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		D63170F41CAA00E500526C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 188C68105F2F9668C788EC9E /* Pods-Workout watchTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Workout watchTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Grow-muscle.Workout-watchTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Workout watch.app/Workout watch";
 			};
 			name = Debug;
 		};
 		D63170F51CAA00E500526C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72DF7D9B95880BB818B567C /* Pods-Workout watchTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Workout watchTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Grow-muscle.Workout-watchTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Workout watch.app/Workout watch";
 			};
 			name = Release;
 		};
 		D63170F71CAA00E500526C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56D1EADC858CB50E31A4EA4 /* Pods-Workout watchUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Workout watchUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Grow-muscle.Workout-watchUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Workout watch";
 			};
 			name = Debug;
 		};
 		D63170F81CAA00E500526C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9B4A9B8A0E48081A2FD83F /* Pods-Workout watchUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Workout watchUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Grow-muscle.Workout-watchUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Workout watch";
 			};
 			name = Release;
