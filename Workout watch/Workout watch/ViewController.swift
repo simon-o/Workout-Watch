@@ -11,12 +11,14 @@ import UICircularProgressRing
 import AVFoundation
 import GoogleMobileAds
 
+var global = 0
+
 extension Date {
     func dayOfWeek() -> Int! {
         guard
             let cal: Calendar = Calendar.current,
             let comp: DateComponents = (cal as NSCalendar).components(.weekday, from: self) else { return nil }
-        return comp.weekday
+        return comp.weekday! + global
     }
 }
 
@@ -38,6 +40,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     var startTime = TimeInterval()
     var timer = Timer()
     
+    @IBOutlet weak var spotifyButton: UIButton!
     @IBOutlet weak var LabelNext: UILabel!
     @IBOutlet weak var LabelTime: UILabel!
     @IBOutlet weak var NavBar: UINavigationItem!
@@ -58,9 +61,13 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         self.numberSet = self.numberSetTab[self.ExerciseIndex]
         self.displayExerciseName()
         
-        let logo = UIImage(named: "noun_314420_cc")
-        let imageView = UIImageView(image:logo)
-        self.NavBar.titleView = imageView
+        let instagramHooks = "spotify://"
+        let instagramUrl = NSURL(string: instagramHooks)
+        if !UIApplication.shared.canOpenURL(instagramUrl! as URL)
+        {
+            self.spotifyButton.isHidden = true;
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,11 +97,52 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         }
     }
     
+    func addDay() -> Void {
+        let day = Date().dayOfWeek() - global
+        global += 1
+        
+        if ((day + global) > 7){
+            switch day {
+            case 1:
+                global = 0
+            case 2:
+                global = -1
+            case 3:
+                global = -2
+            case 4:
+                global = -3
+            case 5:
+                global = -4
+            case 6:
+                global = -5
+            case 7:
+                global = -7
+            default:
+                global = 0
+            }
+        }
+        self.ExerciseIndex = 0
+        self.viewWillAppear(false)
+    }
+    
     func popUp(view: AnyObject, errrorMessage: String, backToRoot: Bool) -> Void {
         
         let alertController = UIAlertController(title: "StopWatch", message: errrorMessage, preferredStyle: UIAlertControllerStyle.alert)
-        if (backToRoot == false){
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        if (backToRoot == false)
+        {
+            alertController.message = alertController.message! + " Do you want to see tomorrow exercise ?"
+            
+            let cancelAction1 = UIAlertAction(title: "No", style: .default) { (action) in
+                view.navigationController?!.popToRootViewController(animated: true)
+            }
+            alertController.addAction(cancelAction1)
+            
+            let cancelAction = UIAlertAction(title: "Yes", style: .default) { (action) in
+                view.navigationController?!.popToRootViewController(animated: true)
+                self.addDay()
+            }
+            alertController.addAction(cancelAction)
+            
         }
         else{
             let cancelAction = UIAlertAction(title: "Ok", style: .default) { (action) in
@@ -110,10 +158,10 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             LabelExercise.text = "Exercise: \(dictName[self.ExerciseIndex]) \(self.numberSet)/\(self.dictSet[self.ExerciseIndex])\n"
             self.progressRing.maxValue = CGFloat(dictSec[self.ExerciseIndex])
             if (dictName.count > self.ExerciseIndex + 1){
-             self.LabelNext.text = "Next: \(self.dictName[self.ExerciseIndex + 1])"
+                self.LabelNext.text = "Next: \(self.dictName[self.ExerciseIndex + 1])"
             }
             else{
-             self.LabelNext.text = "Next:"
+                self.LabelNext.text = "Next:"
             }
         }
         else{
@@ -133,11 +181,11 @@ class ViewController: UIViewController, GADBannerViewDelegate {
                 self.displayExerciseName()
                 self.Stop(self)
             }else{
-                popUp(view: self, errrorMessage: "No previous exercise", backToRoot: false)
+                popUp(view: self, errrorMessage: "No previous exercise.", backToRoot: true)
             }
         }
         else{
-            popUp(view: self, errrorMessage: "Not allowed when timer is running", backToRoot: false)
+            popUp(view: self, errrorMessage: "Not allowed when timer is running.", backToRoot: true)
         }
     }
     
@@ -156,26 +204,26 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             }
             else{
                 if (self.numberSet == self.dictSet[self.ExerciseIndex] && self.ExerciseIndex == self.dictName.count - 1){
-                    popUp(view: self, errrorMessage: "No more exercise for today", backToRoot: false)
+                    popUp(view: self, errrorMessage: "No more exercise for today.", backToRoot: true)
                     self.Stop(self)
                     return
                 }
-                popUp(view: self, errrorMessage: "No next exercise", backToRoot: false)
+                popUp(view: self, errrorMessage: "No next exercise.", backToRoot: false)
             }
         }
         else{
-            popUp(view: self, errrorMessage: "Not allowed when timer is running", backToRoot: false)
+            popUp(view: self, errrorMessage: "Not allowed when timer is running.", backToRoot: true)
         }
     }
     
     @IBAction func Start(_ sender: Any) {
         //calcul du temp
         if (self.numberSet == self.dictSet[self.ExerciseIndex] && self.ExerciseIndex == self.dictName.count - 1){
-            popUp(view: self, errrorMessage: "No more exercise for today", backToRoot: false)
+            popUp(view: self, errrorMessage: "No more exercise for today.", backToRoot: true)
             return
         }
         if (self.dictSet[self.ExerciseIndex] == 0 || self.dictSec[self.ExerciseIndex] == 0){
-            popUp(view: self, errrorMessage: "The exercise is empty", backToRoot: false)
+            popUp(view: self, errrorMessage: "The exercise is empty.", backToRoot: false)
             self.next()
             return
         }
@@ -183,7 +231,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             WatchRunning = true
             
             let aSelector : Selector = #selector(ViewController.updateTime)
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = Date.timeIntervalSinceReferenceDate
         }
     }
@@ -201,7 +249,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         self.LabelTime.text = "\(strMinutes):\(strSeconds)"
         let tmp = currentTime - startTime
-
+        
         self.progressRing.setProgress(value: CGFloat(tmp), animationDuration: 0.05) {
         }
         
@@ -253,7 +301,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             UIApplication.shared.open(instagramUrl as! URL, options: [:], completionHandler: nil)
         }
         else{
-            popUp(view: self, errrorMessage: "You do not have Spotify on your phone", backToRoot: false)
+            popUp(view: self, errrorMessage: "You do not have Spotify on your phone.", backToRoot: false)
         }
     }
 }
